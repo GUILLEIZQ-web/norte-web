@@ -85,7 +85,7 @@ formulario?.addEventListener("submit", (evento) => {
   const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email || "");
   if (!nombre || !email || !mensaje) { resultado.textContent = "Por favor, completa todos los campos."; resultado.style.color = "#c0392b"; return; }
   if (!emailValido) { resultado.textContent = "Escribe un correo electrónico válido."; resultado.style.color = "#c0392b"; return; }
-  resultado.textContent = "¡Gracias por contactar con Café Montaña! ☕";
+  resultado.textContent = "¡Gracias por contactar con Café Brisa! ☕";
   resultado.style.color = "#278d52";
   formulario.reset();
 });
@@ -129,4 +129,4 @@ window.addEventListener("scroll", () => { if (!pendiente) { window.requestAnimat
 actualizarScroll();
 botonArriba?.addEventListener("click", () => window.scrollTo({ top:0, behavior:"smooth" }));
 
-console.log("Café Montaña listo ☕");
+console.log("Café Brisa listo ☕");

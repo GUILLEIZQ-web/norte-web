@@ -18,6 +18,31 @@
 
   applyTheme(saved || defaultTheme);
 
+  const progress = document.createElement('div');
+  progress.className = 'demo-scroll-progress';
+  progress.setAttribute('aria-hidden', 'true');
+  document.body.prepend(progress);
+
+  const updateProgress = () => {
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    const value = total > 0 ? Math.min(100, (window.scrollY / total) * 100) : 0;
+    progress.style.setProperty('--demo-scroll', `${value}%`);
+  };
+  updateProgress();
+  window.addEventListener('scroll', updateProgress, { passive: true });
+
+  const revealItems = [...document.querySelectorAll('.demo-section, .demo-faq, .demo-proof-section, .demo-stat-strip')];
+  revealItems.forEach((item) => item.classList.add('demo-reveal'));
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    }), { threshold: 0.12 });
+    revealItems.forEach((item) => revealObserver.observe(item));
+  } else revealItems.forEach((item) => item.classList.add('is-visible'));
+
   button?.addEventListener('click', () => {
     const next = page.dataset.theme === 'dark' ? 'light' : 'dark';
     localStorage.setItem('norte-demo-theme', next);

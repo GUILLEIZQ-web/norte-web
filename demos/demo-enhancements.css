@@ -1,8 +1,12 @@
 /* Visual service cards and FAQ additions for the portfolio demos. */
 .service-card{display:flex;min-height:0;padding:0;overflow:hidden;flex-direction:column;transition:transform .22s ease,box-shadow .22s ease}
 .service-card:hover{box-shadow:var(--shadow);transform:translateY(-6px)}
-.service-photo{position:relative;min-height:178px;background-repeat:no-repeat;background-size:300% 100%;background-image:var(--service-image);background-position:var(--service-position)}
-.service-photo::after{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,19,27,0),rgba(8,19,27,.16));content:""}
+.service-photo{position:relative;min-height:205px;overflow:hidden;background:linear-gradient(135deg,var(--accent-soft),var(--tint))}
+.service-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.05) contrast(1.03);transition:transform .6s ease}
+.service-photo.photo-1 img{object-position:left center}.service-photo.photo-2 img{object-position:center center}.service-photo.photo-3 img{object-position:right center}
+.service-card:hover .service-photo img{transform:scale(1.035)}
+.service-photo::after{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,19,27,0),rgba(8,19,27,.34));content:""}
+.service-photo span{position:absolute;z-index:2;right:14px;bottom:13px;padding:7px 10px;border:1px solid rgba(255,255,255,.45);border-radius:999px;background:rgba(7,17,24,.64);backdrop-filter:blur(8px);color:#fff;font-size:.67rem;font-weight:800;letter-spacing:.04em}
 .service-card-body{position:relative;padding:22px 24px 25px}
 .service-card-body>b{position:absolute;top:-22px;left:24px;display:grid;place-items:center;width:43px;height:43px;margin:0;border:3px solid var(--surface);border-radius:50%;background:var(--accent-soft);color:var(--deep);font-size:.78rem}
 .service-card-body h3{margin:2px 0 7px}
@@ -18,6 +22,10 @@
 .faq-list summary::after{flex:none;color:var(--accent);content:"+";font-family:"Playfair Display",Georgia,serif;font-size:1.65rem;font-weight:600;transition:transform .2s ease}
 .faq-list details[open] summary::after{transform:rotate(45deg)}
 .faq-list details p{max-width:620px;margin:-6px 0 22px;color:var(--muted);font-size:.9rem;line-height:1.65}
+.demo-proof-section{padding:82px 0;background:linear-gradient(135deg,var(--deep),color-mix(in srgb,var(--deep) 78%,var(--accent)))}
+.proof-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:68px;align-items:center}.proof-card{position:relative;padding:32px;border:1px solid rgba(255,255,255,.2);border-radius:21px;background:rgba(255,255,255,.08);box-shadow:0 22px 48px rgba(0,0,0,.16);color:#fff}.proof-card::before{position:absolute;top:-24px;left:22px;color:var(--accent);content:"“";font-family:"Playfair Display",Georgia,serif;font-size:5rem;line-height:1}.proof-card span{color:#ffe28b;font-size:.84rem;letter-spacing:.13em}.proof-card p{margin:17px 0;color:#fff;font-family:"Playfair Display",Georgia,serif;font-size:1.45rem;line-height:1.22}.proof-card b{color:rgba(255,255,255,.72);font-size:.78rem}.proof-copy .section-kicker{color:rgba(255,255,255,.66)}.proof-copy .section-title{color:#fff}.proof-copy p:last-child{max-width:570px;margin:22px 0 0;color:rgba(255,255,255,.76);line-height:1.65}
+.demo-scroll-progress{position:fixed;z-index:50;top:0;left:0;width:var(--demo-scroll,0%);height:3px;background:var(--accent);box-shadow:0 1px 12px var(--accent);transition:width .08s linear}
+.demo-section,.demo-faq,.demo-proof-section,.demo-stat-strip{transition:opacity .55s ease,transform .55s ease}.demo-reveal{opacity:0;transform:translateY(22px)}.demo-reveal.is-visible{opacity:1;transform:translateY(0)}
 .demo-button:focus-visible,.demo-nav a:focus-visible,.demo-theme:focus-visible,.demo-menu:focus-visible,.faq-list summary:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
-@media(max-width:860px){.faq-layout{grid-template-columns:1fr;gap:35px}}
-@media(max-width:650px){.service-photo{min-height:210px}.demo-faq{padding:76px 0}.service-card-body{padding-right:22px;padding-left:22px}.service-card-body>b{left:22px}.faq-list summary{padding:19px 0}}
+@media(max-width:860px){.faq-layout,.proof-grid{grid-template-columns:1fr;gap:35px}}
+@media(max-width:650px){.service-photo{min-height:210px}.demo-faq{padding:76px 0}.demo-proof-section{padding:64px 0}.proof-card{padding:27px 24px}.service-card-body{padding-right:22px;padding-left:22px}.service-card-body>b{left:22px}.faq-list summary{padding:19px 0}}
