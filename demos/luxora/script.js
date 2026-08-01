@@ -27,25 +27,25 @@
   };
 
   var image = {
-    audio: 'aarn-giri-YcEISwbqzsw-unsplash.jpg',
-    power: 'christian-wiediger-WkfDrhxDMC8-unsplash.jpg',
-    wearable: 'barry-a-XxvKhAUs2PA-unsplash.jpg',
-    desk: 'studio-proper-EfwdRR4OYAM-unsplash.jpg',
-    cable: 'studio-proper-EfwdRR4OYAM-unsplash.jpg',
-    speaker: 'nilay-kamu-zd7FsTT32sM-unsplash.jpg',
-    stand: 'supratik-deshmukh-iO0I6-mhDEY-unsplash.jpg',
-    lamp: 'luke-peterson-lUMj2Zv5HUE-unsplash.jpg'
+    audio: 'products/aria-pro-buds.png',
+    power: 'products/halo-charge-stand.png',
+    wearable: 'products/noir-smart-strap.png',
+    desk: 'products/flux-desk-pad.png',
+    cable: 'products/pulse-cable-kit.png',
+    speaker: 'products/edge-audio-bar.png',
+    stand: 'products/aero-laptop-stand.png',
+    lamp: 'products/lumen-desk-lamp.png'
   };
 
   var products = [
-    { id: 1, slug: 'aria-pro-buds', name: 'Aria Pro Buds', category: 'audio', tag: 'Más vendido', description: 'Auriculares con cancelación activa, estuche luminoso y sonido espacial equilibrado.', price: 149, oldPrice: 199, rating: 4.9, reviews: 128, popularity: 98, isNew: false, images: [image.audio, 'michael-soledad-lWlJLgJoq68-unsplash.jpg', 'nilay-kamu-zd7FsTT32sM-unsplash.jpg'], variants: [{ name: 'Color', values: [{ value: 'Obsidian', stock: 12 }, { value: 'Cloud', stock: 6 }] }, { name: 'Capacidad', values: [{ value: '32 h', stock: 18 }, { value: '48 h', stock: 8 }] }] },
-    { id: 2, slug: 'halo-charge-stand', name: 'Halo Charge Stand', category: 'power', tag: 'Signature', description: 'Base de carga magnética con alineación precisa, enfriamiento inteligente y luz ambiente.', price: 139, oldPrice: 179, rating: 4.8, reviews: 96, popularity: 94, isNew: true, images: [image.power, 'michael-soledad-lWlJLgJoq68-unsplash.jpg', 'studio-proper-EfwdRR4OYAM-unsplash.jpg'], variants: [{ name: 'Acabado', values: [{ value: 'Graphite', stock: 5 }, { value: 'Silver', stock: 9 }] }, { name: 'Conector', values: [{ value: 'USB-C', stock: 11 }, { value: 'MagSafe', stock: 7 }] }] },
-    { id: 3, slug: 'noir-smart-strap', name: 'Noir Smart Strap', category: 'wearable', tag: 'Nuevo', description: 'Banda de ajuste cómodo con sensores biométricos y un acabado pensado para usar a diario.', price: 99, oldPrice: 129, rating: 4.7, reviews: 74, popularity: 79, isNew: true, images: [image.wearable, 'supratik-deshmukh-iO0I6-mhDEY-unsplash.jpg', image.audio], variants: [{ name: 'Color', values: [{ value: 'Noir', stock: 19 }, { value: 'Sand', stock: 12 }] }, { name: 'Tamaño', values: [{ value: 'S/M', stock: 17 }, { value: 'M/L', stock: 14 }] }] },
-    { id: 4, slug: 'flux-desk-pad', name: 'Flux Desk Pad', category: 'desk', tag: 'Workspace', description: 'Superficie minimalista para el espacio de trabajo, compatible con sensores ópticos y carga.', price: 69, oldPrice: 89, rating: 4.8, reviews: 63, popularity: 83, isNew: false, images: [image.desk, 'luke-peterson-lUMj2Zv5HUE-unsplash.jpg', 'supratik-deshmukh-iO0I6-mhDEY-unsplash.jpg'], variants: [{ name: 'Color', values: [{ value: 'Slate', stock: 8 }, { value: 'Mist', stock: 16 }] }, { name: 'Tamaño', values: [{ value: 'Medium', stock: 15 }, { value: 'Large', stock: 9 }] }] },
-    { id: 5, slug: 'pulse-cable-kit', name: 'Pulse Cable Kit', category: 'power', tag: 'Essential', description: 'Juego de cables trenzados de alta resistencia para cargar todos tus dispositivos.', price: 44, oldPrice: 59, rating: 4.6, reviews: 141, popularity: 88, isNew: false, images: [image.cable, image.power, 'michael-soledad-lWlJLgJoq68-unsplash.jpg'], variants: [{ name: 'Color', values: [{ value: 'Graphite', stock: 14 }, { value: 'Linen', stock: 10 }] }, { name: 'Longitud', values: [{ value: '1 m', stock: 18 }, { value: '2 m', stock: 6 }] }] },
-    { id: 6, slug: 'edge-audio-bar', name: 'Edge Audio Bar', category: 'audio', tag: 'Studio', description: 'Barra de sonido de escritorio con graves precisos, perfil fino y sintonía ambiental.', price: 189, oldPrice: 249, rating: 4.9, reviews: 52, popularity: 91, isNew: false, images: [image.speaker, image.audio, 'michael-soledad-lWlJLgJoq68-unsplash.jpg'], variants: [{ name: 'Color', values: [{ value: 'Black', stock: 3 }, { value: 'Stone', stock: 4 }] }, { name: 'Potencia', values: [{ value: '40 W', stock: 10 }, { value: '60 W', stock: 4 }] }] },
-    { id: 7, slug: 'aero-stand', name: 'Aero Stand', category: 'desk', tag: 'Elevate', description: 'Soporte ajustable de aluminio para elevar la pantalla y recuperar espacio en el escritorio.', price: 99, oldPrice: 129, rating: 4.8, reviews: 87, popularity: 85, isNew: false, images: [image.stand, image.desk, 'luke-peterson-lUMj2Zv5HUE-unsplash.jpg'], variants: [{ name: 'Acabado', values: [{ value: 'Aluminium', stock: 20 }, { value: 'Space Gray', stock: 7 }] }, { name: 'Tamaño', values: [{ value: '13-14"', stock: 18 }, { value: '15-16"', stock: 9 }] }] },
-    { id: 8, slug: 'lumen-desk-lamp', name: 'Lumen Desk Lamp', category: 'desk', tag: 'Glow', description: 'Lámpara OLED de escritorio con temperatura adaptativa y escenas para concentración.', price: 109, oldPrice: 149, rating: 4.7, reviews: 59, popularity: 76, isNew: true, images: [image.lamp, image.desk, image.power], variants: [{ name: 'Color', values: [{ value: 'Midnight', stock: 11 }, { value: 'Pearl', stock: 9 }] }, { name: 'Temperatura', values: [{ value: '2700-6500 K', stock: 15 }, { value: 'RGB+', stock: 5 }] }] }
+    { id: 1, slug: 'aria-pro-buds', name: 'Aria Pro Buds', category: 'audio', tag: 'Más vendido', description: 'Auriculares con cancelación activa, estuche luminoso y sonido espacial equilibrado.', price: 149, oldPrice: 199, rating: 4.9, reviews: 128, popularity: 98, isNew: false, images: [image.audio], variants: [{ name: 'Color', values: [{ value: 'Grafito', stock: 12 }, { value: 'Niebla', stock: 6 }] }, { name: 'Capacidad', values: [{ value: '32 h', stock: 18 }, { value: '48 h', stock: 8 }] }] },
+    { id: 2, slug: 'halo-charge-stand', name: 'Halo Charge Stand', category: 'power', tag: 'Edición especial', description: 'Base de carga magnética con alineación precisa, enfriamiento inteligente y luz ambiente.', price: 139, oldPrice: 179, rating: 4.8, reviews: 96, popularity: 94, isNew: true, images: [image.power], variants: [{ name: 'Acabado', values: [{ value: 'Grafito', stock: 5 }, { value: 'Plata', stock: 9 }] }, { name: 'Conector', values: [{ value: 'USB-C', stock: 11 }, { value: 'Magnético', stock: 7 }] }] },
+    { id: 3, slug: 'noir-smart-strap', name: 'Noir Smart Strap', category: 'wearable', tag: 'Nuevo', description: 'Banda de ajuste cómodo con sensores biométricos y un acabado pensado para usar a diario.', price: 99, oldPrice: 129, rating: 4.7, reviews: 74, popularity: 79, isNew: true, images: [image.wearable], variants: [{ name: 'Color', values: [{ value: 'Negro', stock: 19 }, { value: 'Arena', stock: 12 }] }, { name: 'Tamaño', values: [{ value: 'S/M', stock: 17 }, { value: 'M/L', stock: 14 }] }] },
+    { id: 4, slug: 'flux-desk-pad', name: 'Flux Desk Pad', category: 'desk', tag: 'Escritorio', description: 'Superficie minimalista para el espacio de trabajo, compatible con sensores ópticos y carga.', price: 69, oldPrice: 89, rating: 4.8, reviews: 63, popularity: 83, isNew: false, images: [image.desk], variants: [{ name: 'Color', values: [{ value: 'Pizarra', stock: 8 }, { value: 'Niebla', stock: 16 }] }, { name: 'Tamaño', values: [{ value: 'Mediano', stock: 15 }, { value: 'Grande', stock: 9 }] }] },
+    { id: 5, slug: 'pulse-cable-kit', name: 'Pulse Cable Kit', category: 'power', tag: 'Esencial', description: 'Juego de cables trenzados de alta resistencia para cargar todos tus dispositivos.', price: 44, oldPrice: 59, rating: 4.6, reviews: 141, popularity: 88, isNew: false, images: [image.cable], variants: [{ name: 'Color', values: [{ value: 'Grafito', stock: 14 }, { value: 'Lino', stock: 10 }] }, { name: 'Longitud', values: [{ value: '1 m', stock: 18 }, { value: '2 m', stock: 6 }] }] },
+    { id: 6, slug: 'edge-audio-bar', name: 'Edge Audio Bar', category: 'audio', tag: 'Estudio', description: 'Barra de sonido de escritorio con graves precisos, perfil fino y sintonía ambiental.', price: 189, oldPrice: 249, rating: 4.9, reviews: 52, popularity: 91, isNew: false, images: [image.speaker], variants: [{ name: 'Color', values: [{ value: 'Negro', stock: 3 }, { value: 'Piedra', stock: 4 }] }, { name: 'Potencia', values: [{ value: '40 W', stock: 10 }, { value: '60 W', stock: 4 }] }] },
+    { id: 7, slug: 'aero-stand', name: 'Aero Stand', category: 'desk', tag: 'Ergonomía', description: 'Soporte ajustable de aluminio para elevar la pantalla y recuperar espacio en el escritorio.', price: 99, oldPrice: 129, rating: 4.8, reviews: 87, popularity: 85, isNew: false, images: [image.stand], variants: [{ name: 'Acabado', values: [{ value: 'Aluminio', stock: 20 }, { value: 'Gris espacial', stock: 7 }] }, { name: 'Tamaño', values: [{ value: '13-14"', stock: 18 }, { value: '15-16"', stock: 9 }] }] },
+    { id: 8, slug: 'lumen-desk-lamp', name: 'Lumen Desk Lamp', category: 'desk', tag: 'Iluminación', description: 'Lámpara LED de escritorio con temperatura adaptativa y escenas para concentración.', price: 109, oldPrice: 149, rating: 4.7, reviews: 59, popularity: 76, isNew: true, images: [image.lamp], variants: [{ name: 'Color', values: [{ value: 'Medianoche', stock: 11 }, { value: 'Perla', stock: 9 }] }, { name: 'Temperatura', values: [{ value: '2700-6500 K', stock: 15 }, { value: 'RGB+', stock: 5 }] }] }
   ];
 
   var sampleReviews = {
@@ -98,8 +98,8 @@
     couponUse: load('coupon-use', {}),
     cookies: load('cookies', null),
     country: load('country', browserCountry()),
-    currency: load('currency', 'USD'),
-    language: 'en',
+    currency: load('currency', 'CRC'),
+    language: 'es',
     theme: load('theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'),
     filters: { category: 'all', term: '', maxPrice: 250, rating: 0, inStock: false, lowStock: false, sort: 'featured' },
     productView: { id: null, selection: {}, image: 0, media: 'image' },
@@ -129,7 +129,7 @@
     'Accesorios tecnológicos que combinan materiales refinados, rendimiento silencioso y una presencia extraordinaria.': 'Tech accessories that combine refined materials, quiet performance and an extraordinary presence.',
     'Guías': 'Guides', 'Diseño': 'Design', 'Novedades': 'New arrivals', 'Leer artículo': 'Read article',
     'Acceso anticipado': 'Early access', 'Recibe lanzamientos y beneficios exclusivos.': 'Receive launches and exclusive benefits.', 'Consentimiento claro, sin listas de correo invasivas.': 'Clear consent, no intrusive email lists.',
-    'Tecnología elegante para el escritorio moderno.': 'Elegant technology for the modern desk.', 'Desarrollado por Guillermo': 'Developed by Guillermo',
+    'Tecnología elegante para el escritorio moderno.': 'Elegant technology for the modern desk.', 'Demo creada por Norte Web': 'Demo created by Norte Web',
     'Auriculares con cancelación activa, estuche luminoso y sonido espacial equilibrado.': 'Earbuds with active noise cancellation, a luminous case and balanced spatial sound.',
     'Base de carga magnética con alineación precisa, enfriamiento inteligente y luz ambiente.': 'Magnetic charging stand with precise alignment, intelligent cooling and ambient light.',
     'Banda de ajuste cómodo con sensores biométricos y un acabado pensado para usar a diario.': 'Comfortable band with biometric sensors and a finish designed for daily wear.',
@@ -155,7 +155,7 @@
     'Explorar en 360°': 'Explore in 360°', 'Restablecer catálogo': 'Reset catalogue',
     'No encontramos productos con esos filtros.': 'We could not find products matching those filters.',
     'Personalizar Halo': 'Customize Halo', 'La utilidad de los objetos bien hechos': 'The value of well-made objects',
-    '© 2026 LUXORA. Todos los derechos reservados.': '© 2026 LUXORA. All rights reserved.', 'Desarrollado por Guillermo': 'Developed by Guillermo',
+    '© 2026 LUXORA. Todos los derechos reservados.': '© 2026 LUXORA. All rights reserved.', 'Demo creada por Norte Web': 'Demo created by Norte Web',
     'Enlaces informativos': 'Information links', 'Cerrar carrito': 'Close cart', 'Cerrar producto': 'Close product',
     'Cerrar cuenta': 'Close account', 'Cerrar comparador': 'Close comparer', 'Cerrar checkout': 'Close checkout',
     'Cerrar chat': 'Close chat', 'Enviar mensaje': 'Send message', 'Hablar por WhatsApp con LUXORA': 'Chat with LUXORA on WhatsApp',
@@ -348,9 +348,9 @@
     return state.language === 'en' ? englishDynamicText(String(value)) : String(value);
   }
   function applyLanguage() {
-    var isEnglish = true;
-    document.documentElement.lang = 'en';
-    document.title = 'LUXORA · Premium Tech Accessories';
+    var isEnglish = state.language === 'en';
+    document.documentElement.lang = isEnglish ? 'en' : 'es';
+    document.title = isEnglish ? 'LUXORA · Premium Tech Accessories' : 'LUXORA · Tienda tecnológica premium';
     document.querySelectorAll('[placeholder], [aria-label], [title], [alt]').forEach(function (element) {
       ['placeholder', 'aria-label', 'title', 'alt'].forEach(function (attribute) {
         var value = element.getAttribute(attribute);

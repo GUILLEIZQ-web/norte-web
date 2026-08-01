@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,9 +9,9 @@
   <meta name="description" content="Demo e-commerce de accesorios tecnológicos premium creada por Norte Web.">
   <meta name="robots" content="index,follow">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="LUXORA · Premium Tech Accessories">
+  <meta property="og:title" content="LUXORA · Accesorios tecnológicos premium">
   <meta property="og:description" content="Accesorios tecnológicos premium para tu espacio de trabajo.">
-  <meta property="og:image" content="hero.jpg">
+  <meta property="og:image" content="products/halo-charge-stand.png">
   <meta name="twitter:card" content="summary_large_image">
   <title>LUXORA · Demo e-commerce de Norte Web</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,22 +42,22 @@
   <header class="navbar" id="navbar">
     <a class="navbar__brand" href="#inicio" aria-label="LUXORA, ir al inicio">
       <span class="brand__mark" aria-hidden="true">L</span>
-      <span><span class="eyebrow">LUXORA</span><strong>Premium tech accessories</strong></span>
+      <span><span class="eyebrow">LUXORA</span><strong>Accesorios tecnológicos premium</strong></span>
     </a>
 
     <nav class="navbar__nav" aria-label="Navegación principal">
       <a href="#inicio">Inicio</a>
       <a href="#productos">Productos</a>
       <a href="#destacados">Destacados</a>
-      <a href="#journal">Journal</a>
+      <a href="#journal">Ideas</a>
       <button class="nav-link" data-open-info="help" type="button">Ayuda</button>
     </nav>
 
     <div class="navbar__actions">
       <label class="sr-only" for="currencySelect">Moneda</label>
       <select class="compact-select" id="currencySelect" aria-label="Seleccionar moneda">
-        <option value="USD">USD</option>
         <option value="CRC">CRC</option>
+        <option value="USD">USD</option>
         <option value="EUR">EUR</option>
       </select>
       <button class="icon-btn" id="themeToggle" type="button" aria-label="Cambiar a modo oscuro" title="Cambiar tema">◐</button>
@@ -75,7 +75,7 @@
       <a href="#inicio" data-close-mobile>Inicio</a>
       <a href="#productos" data-close-mobile>Productos</a>
       <a href="#destacados" data-close-mobile>Destacados</a>
-      <a href="#journal" data-close-mobile>Journal</a>
+      <a href="#journal" data-close-mobile>Ideas</a>
       <button data-open-info="tracking" type="button">Rastrear pedido</button>
       <button data-open-info="contact" type="button">Contacto</button>
     </nav>
@@ -99,7 +99,7 @@
       </div>
       <button class="hero__visual reveal" id="heroPreview" type="button" aria-label="Abrir vista del producto destacado">
         <span class="hero__label">LUXORA</span>
-        <img src="hero.jpg" alt="Accesorio tecnológico LUXORA sobre fondo oscuro" fetchpriority="high">
+        <img src="products/halo-charge-stand.png" alt="Base de carga Halo Charge Stand sobre fondo oscuro" fetchpriority="high">
         <span class="hero__visual-hint">Explorar en 360°</span>
       </button>
     </section>
@@ -187,7 +187,7 @@
     </section>
 
     <section class="section featured-card reveal">
-      <div class="featured-card__media"><img src="michael-soledad-lWlJLgJoq68-unsplash.jpg" alt="Base de carga Halo Charge Stand" loading="lazy"></div>
+      <div class="featured-card__media"><img src="products/halo-charge-stand.png" alt="Base de carga Halo Charge Stand" loading="lazy"></div>
       <div class="featured-card__content">
         <span class="eyebrow">Pieza insignia</span>
         <h2>Halo Charge Stand</h2>
@@ -207,11 +207,11 @@
     </section>
 
     <section class="section journal" id="journal">
-      <div class="section__header reveal"><span class="eyebrow">LUXORA Journal</span><div><h2>Ideas para un espacio que se siente tuyo.</h2><p>El blog está preparado para publicaciones y guías de producto.</p></div></div>
+      <div class="section__header reveal"><span class="eyebrow">Ideas LUXORA</span><div><h2>Ideas para un espacio que se siente tuyo.</h2><p>El blog está preparado para publicaciones y guías de producto.</p></div></div>
       <div class="journal-grid reveal">
-        <article><img src="studio-proper-EfwdRR4OYAM-unsplash.jpg" alt="" loading="lazy"><span>Guías</span><h3>Cómo crear un escritorio más tranquilo</h3><button class="text-button" data-open-info="journal" type="button">Leer artículo</button></article>
-        <article><img src="supratik-deshmukh-iO0I6-mhDEY-unsplash.jpg" alt="" loading="lazy"><span>Diseño</span><h3>La utilidad de los objetos bien hechos</h3><button class="text-button" data-open-info="journal" type="button">Leer artículo</button></article>
-        <article><img src="luke-peterson-lUMj2Zv5HUE-unsplash.jpg" alt="" loading="lazy"><span>Novedades</span><h3>La luz que acompaña tus horas de enfoque</h3><button class="text-button" data-open-info="journal" type="button">Leer artículo</button></article>
+        <article><img src="products/flux-desk-pad.png" alt="Escritorio con Desk Pad Flux" loading="lazy"><span>Guías</span><h3>Cómo crear un escritorio más tranquilo</h3><button class="text-button" data-open-info="journal" type="button">Leer artículo</button></article>
+        <article><img src="products/aero-laptop-stand.png" alt="Soporte de portátil Aero" loading="lazy"><span>Diseño</span><h3>La utilidad de los objetos bien hechos</h3><button class="text-button" data-open-info="journal" type="button">Leer artículo</button></article>
+        <article><img src="products/lumen-desk-lamp.png" alt="Lámpara de escritorio Lumen" loading="lazy"><span>Novedades</span><h3>La luz que acompaña tus horas de enfoque</h3><button class="text-button" data-open-info="journal" type="button">Leer artículo</button></article>
       </div>
     </section>
 
