@@ -4,6 +4,7 @@
   const storedTheme = localStorage.getItem('norte-theme');
   const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   const themeButton = document.querySelector('.theme-toggle');
+  const themeColorMeta = document.querySelector('meta[name="theme-color"]');
   const menuButton = document.querySelector('.menu-button');
   const menu = document.querySelector('.nav-links');
   const hasWhatsApp = /^\d{8,15}$/.test(config.whatsapp || '');
@@ -11,6 +12,7 @@
 
   function setTheme(theme) {
     root.dataset.theme = theme;
+    themeColorMeta?.setAttribute('content', theme === 'dark' ? '#0d1723' : '#f6f7f2');
     themeButton?.setAttribute('aria-pressed', String(theme === 'dark'));
     themeButton?.setAttribute('aria-label', theme === 'dark' ? 'Activar modo claro' : 'Activar modo oscuro');
     if (themeButton) themeButton.querySelector('.theme-icon').textContent = theme === 'dark' ? '☼' : '◐';

@@ -14,3 +14,24 @@
 .site-header a:focus-visible,.button:focus-visible,.text-link:focus-visible,.theme-toggle:focus-visible,.menu-button:focus-visible,.portfolio-faq-list summary:focus-visible{outline:3px solid var(--brand);outline-offset:4px}
 @media(max-width:900px){.portfolio-faq-grid{grid-template-columns:1fr;gap:35px}}
 @media(max-width:680px){.portfolio-faq{padding:76px 0}.portfolio-faq-list summary{padding:19px 0}}
+
+/* Norte Web brand mark, demo previews, and subtle motion. */
+.brand .brand-mark{overflow:hidden;background:transparent;box-shadow:0 7px 17px rgba(7,25,40,.18);transform:none;transition:transform .22s ease,box-shadow .22s ease}
+.brand-mark img{display:block;width:100%;height:100%;border-radius:inherit;object-fit:cover}
+.brand:hover .brand-mark{box-shadow:0 11px 23px rgba(7,25,40,.25);transform:rotate(-7deg) scale(1.08)}
+.demo-preview-stack{display:flex;align-items:center;min-width:78px;height:36px;padding-left:2px}
+.demo-preview-stack i{width:34px;height:34px;margin-left:-9px;border:2px solid var(--bg);border-radius:10px;background-position:center;background-size:cover;box-shadow:0 5px 14px rgba(5,22,34,.22);transform:rotate(var(--tilt));transition:transform .24s ease,margin .24s ease;will-change:transform}
+.demo-preview-stack i:first-child{margin-left:0}.demo-preview-aura{--tilt:-8deg;background-image:url("images/aura-studio-hero.png")}.demo-preview-casa{--tilt:4deg;background-image:url("images/casa-facil-hero.png")}.demo-preview-impulso{--tilt:10deg;background-image:url("images/impulso-hero.png")}
+.hero-proof:hover .demo-preview-stack i{margin-left:0;transform:rotate(0deg) translateY(-3px)}
+.project-image{transition:background-size .7s cubic-bezier(.2,.7,.2,1),filter .35s ease}
+.project-card:hover .project-image{background-size:112%;filter:saturate(1.08)}
+.theme-toggle:hover .theme-icon{transform:rotate(24deg) scale(1.12)}
+.theme-icon{transition:transform .25s ease}
+@keyframes norte-browser-float{0%,100%{transform:rotate(2.5deg) translateY(0)}50%{transform:rotate(2.5deg) translateY(-11px)}}
+@keyframes norte-orb-drift{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-20px,18px,0) scale(1.06)}}
+@keyframes norte-note-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.browser-card{animation:norte-browser-float 7s ease-in-out infinite}
+.hero-orb{animation:norte-orb-drift 12s ease-in-out infinite}
+.orb-two{animation-delay:-5s}.floating-note{animation:norte-note-float 5s ease-in-out infinite}.note-bottom{animation-delay:-2.4s}
+@media(max-width:680px){.demo-preview-stack{min-width:72px}.demo-preview-stack i{width:31px;height:31px}.browser-card,.hero-orb,.floating-note{animation:none}}
+@media(prefers-reduced-motion:reduce){.browser-card,.hero-orb,.floating-note{animation:none}.project-image,.brand .brand-mark,.demo-preview-stack i,.theme-icon{transition:none}}
