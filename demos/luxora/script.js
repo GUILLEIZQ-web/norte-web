@@ -702,7 +702,7 @@
     var average = reviews.length ? reviews.reduce(function (sum, review) { return sum + review.rating; }, 0) / reviews.length : product.rating;
     var gallery;
     if (view.media === '360') {
-      gallery = '<div class="gallery-360" id="gallery360" aria-label="Vista interactiva en 360 grados"><img src="' + esc(product.images[view.image]) + '" alt="Vista 360 de ' + esc(product.name) + '"><span>Arrastra para girar · 360°</span></div>';
+      gallery = '<div class="gallery-360" id="gallery360" role="application" tabindex="0" aria-label="Vista interactiva en 360 grados. Mantén presionado el clic izquierdo y arrastra para girar."><img src="' + esc(product.images[view.image]) + '" alt="Vista 360 de ' + esc(product.name) + '"><span>Arrastra con clic izquierdo · 360°</span></div>';
     } else if (view.media === 'video') {
       gallery = '<div class="gallery-360"><img src="' + esc(product.images[0]) + '" alt=""><span>Vídeo de producto listo para conectar</span></div><p class="form-help">No se proporcionó un archivo de vídeo. Esta ficha está preparada para recibir una URL de vídeo segura desde tu panel.</p>';
     } else {
@@ -738,16 +738,23 @@
     var viewer = id('gallery360');
     if (!viewer) return;
     var startX = null;
-    viewer.addEventListener('pointerdown', function (event) { startX = event.clientX; viewer.setPointerCapture(event.pointerId); });
+    viewer.addEventListener('contextmenu', function (event) { event.preventDefault(); });
+    viewer.addEventListener('pointerdown', function (event) {
+      if (event.button !== 0) return;
+      event.preventDefault();
+      startX = event.clientX;
+      viewer.setPointerCapture(event.pointerId);
+    });
     viewer.addEventListener('pointermove', function (event) {
       if (startX == null) return;
+      event.preventDefault();
       var distance = event.clientX - startX;
       var imageNode = $('img', viewer);
       imageNode.style.setProperty('--rotate', distance / 2 + 'deg');
       imageNode.style.setProperty('--flip', Math.abs(distance) > 90 ? '-1' : '1');
     });
-    viewer.addEventListener('pointerup', function () { startX = null; });
-    viewer.addEventListener('pointercancel', function () { startX = null; });
+    viewer.addEventListener('pointerup', function (event) { startX = null; if (viewer.hasPointerCapture(event.pointerId)) viewer.releasePointerCapture(event.pointerId); });
+    viewer.addEventListener('pointercancel', function (event) { startX = null; if (viewer.hasPointerCapture(event.pointerId)) viewer.releasePointerCapture(event.pointerId); });
   }
 
   function renderCompare() {
