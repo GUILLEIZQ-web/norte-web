@@ -21,7 +21,7 @@
   themeButton?.addEventListener('click', () => { const next = root.dataset.theme === 'dark' ? 'light' : 'dark'; localStorage.setItem('norte-theme', next); setTheme(next); });
 
   document.querySelectorAll('[data-brand]').forEach((el) => { el.textContent = config.brandName || 'Norte Web'; });
-  document.querySelectorAll('[data-owner]').forEach((el) => { el.textContent = config.ownerName || 'Guillermo Izquierdo'; });
+  document.querySelectorAll('[data-owner]').forEach((el) => { el.textContent = config.ownerName || 'Norte Web'; });
   document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });
   document.querySelectorAll('[data-whatsapp]').forEach((el) => {
     if (hasWhatsApp) { el.href = `https://wa.me/${config.whatsapp}?text=${encodeURIComponent('Hola, vi Norte Web y me interesa una página para mi negocio.')}`; el.target = '_blank'; el.rel = 'noreferrer'; }
