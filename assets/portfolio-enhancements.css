@@ -1,0 +1,16 @@
+/* Closing details that make the Norte Web portfolio more complete. */
+.portfolio-faq{padding:105px 0;background:var(--surface);border-top:1px solid var(--line)}
+.portfolio-faq-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:82px;align-items:start}
+.portfolio-faq-copy h2{max-width:520px;margin:14px 0 0;font-size:clamp(2.35rem,4.4vw,4rem);letter-spacing:-.077em;line-height:.95}
+.portfolio-faq-copy h2 em{color:var(--brand-deep);font-family:"Playfair Display",serif;font-style:normal}
+.portfolio-faq-copy p:last-child{max-width:420px;margin:22px 0 0;color:var(--muted);line-height:1.65}
+.portfolio-faq-list{border-top:1px solid var(--line)}
+.portfolio-faq-list details{border-bottom:1px solid var(--line)}
+.portfolio-faq-list summary{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 2px;cursor:pointer;list-style:none;font-size:1rem;font-weight:800;letter-spacing:-.03em}
+.portfolio-faq-list summary::-webkit-details-marker{display:none}
+.portfolio-faq-list summary::after{color:var(--brand-deep);content:"+";font-family:"Playfair Display",serif;font-size:1.7rem;font-weight:600;transition:transform .2s ease}
+.portfolio-faq-list details[open] summary::after{transform:rotate(45deg)}
+.portfolio-faq-list p{max-width:600px;margin:-5px 0 22px;color:var(--muted);font-size:.9rem;line-height:1.65}
+.site-header a:focus-visible,.button:focus-visible,.text-link:focus-visible,.theme-toggle:focus-visible,.menu-button:focus-visible,.portfolio-faq-list summary:focus-visible{outline:3px solid var(--brand);outline-offset:4px}
+@media(max-width:900px){.portfolio-faq-grid{grid-template-columns:1fr;gap:35px}}
+@media(max-width:680px){.portfolio-faq{padding:76px 0}.portfolio-faq-list summary{padding:19px 0}}
