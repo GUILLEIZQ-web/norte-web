@@ -1,0 +1,10 @@
+{
+  "name": "LUXORA · Premium Tech Accessories",
+  "short_name": "LUXORA",
+  "description": "Accesorios tecnológicos premium para tu espacio de trabajo.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0c1224",
+  "theme_color": "#0c1224",
+  "lang": "es"
+}

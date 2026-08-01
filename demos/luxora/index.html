@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c1224">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Demo e-commerce de accesorios tecnológicos premium creada por Norte Web.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="LUXORA · Premium Tech Accessories">
+  <meta property="og:description" content="Accesorios tecnológicos premium para tu espacio de trabajo.">
+  <meta property="og:image" content="hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>LUXORA · Demo e-commerce de Norte Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"LUXORA",
+    "description":"Accesorios tecnológicos premium",
+    "potentialAction":{"@type":"SearchAction","target":"?q={search_term_string}","query-input":"required name=search_term_string"}
+  }
+  </script>
+</head>
+<body class="theme-light">
+  <div class="portfolio-demo-bar"><a href="../../">← Volver a Norte Web</a><span>DEMO INTERACTIVA · MARCA FICTICIA</span><a href="../../#contacto">Quiero una tienda así ↗</a></div>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <div class="reading-progress" aria-hidden="true"><span id="readingProgress"></span></div>
+
+  <div class="promo-bar" role="status">
+    <p>Envío sin costo desde $200 · garantía premium de 18 meses</p>
+    <button class="text-button" id="notificationButton" type="button">Activar novedades</button>
+  </div>
+
+  <header class="navbar" id="navbar">
+    <a class="navbar__brand" href="#inicio" aria-label="LUXORA, ir al inicio">
+      <span class="brand__mark" aria-hidden="true">L</span>
+      <span><span class="eyebrow">LUXORA</span><strong>Premium tech accessories</strong></span>
+    </a>
+
+    <nav class="navbar__nav" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#destacados">Destacados</a>
+      <a href="#journal">Journal</a>
+      <button class="nav-link" data-open-info="help" type="button">Ayuda</button>
+    </nav>
+
+    <div class="navbar__actions">
+      <label class="sr-only" for="currencySelect">Moneda</label>
+      <select class="compact-select" id="currencySelect" aria-label="Seleccionar moneda">
+        <option value="USD">USD</option>
+        <option value="CRC">CRC</option>
+        <option value="EUR">EUR</option>
+      </select>
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Cambiar a modo oscuro" title="Cambiar tema">◐</button>
+      <button class="icon-btn" id="accountButton" type="button" aria-label="Abrir cuenta" title="Cuenta">◉</button>
+      <button class="icon-btn has-badge" id="wishlistButton" type="button" aria-label="Abrir lista de deseos" title="Lista de deseos">♡<span id="wishlistCount">0</span></button>
+      <button class="icon-btn has-badge" id="compareButton" type="button" aria-label="Abrir comparador" title="Comparar">⇄<span id="compareCount">0</span></button>
+      <button class="icon-btn has-badge" id="cartToggle" type="button" aria-label="Abrir carrito" title="Carrito">⌑<span id="cartCount">0</span></button>
+      <button class="icon-btn mobile-only" id="mobileToggle" type="button" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <aside class="mobile-menu" id="mobileMenu" aria-label="Menú de navegación" aria-hidden="true">
+    <button class="icon-btn close-button" data-close-mobile type="button" aria-label="Cerrar menú">×</button>
+    <nav>
+      <a href="#inicio" data-close-mobile>Inicio</a>
+      <a href="#productos" data-close-mobile>Productos</a>
+      <a href="#destacados" data-close-mobile>Destacados</a>
+      <a href="#journal" data-close-mobile>Journal</a>
+      <button data-open-info="tracking" type="button">Rastrear pedido</button>
+      <button data-open-info="contact" type="button">Contacto</button>
+    </nav>
+  </aside>
+
+  <main id="main">
+    <section class="hero section" id="inicio">
+      <div class="hero__content reveal">
+        <span class="eyebrow">Colección premium 2026</span>
+        <h1>Diseñado para el escritorio moderno, hecho para todos los días.</h1>
+        <p>Accesorios tecnológicos que combinan materiales refinados, rendimiento silencioso y una presencia extraordinaria.</p>
+        <div class="hero__actions">
+          <a class="btn btn-primary" href="#productos">Descubrir colección</a>
+          <button class="btn btn-secondary" id="heroDemo" type="button">Ver experiencia 360°</button>
+        </div>
+        <div class="hero__badges" aria-label="Indicadores de confianza">
+          <div><strong>4.9/5</strong><span>valoración media</span></div>
+          <div><strong>10K+</strong><span>clientes satisfechos</span></div>
+          <div><strong>24 h</strong><span>soporte premium</span></div>
+        </div>
+      </div>
+      <button class="hero__visual reveal" id="heroPreview" type="button" aria-label="Abrir vista del producto destacado">
+        <span class="hero__label">LUXORA</span>
+        <img src="hero.jpg" alt="Accesorio tecnológico LUXORA sobre fondo oscuro" fetchpriority="high">
+        <span class="hero__visual-hint">Explorar en 360°</span>
+      </button>
+    </section>
+
+    <section class="trust-strip section reveal" aria-label="Ventajas de comprar en Luxora">
+      <span>Entrega protegida</span><span>Pagos preparados para proveedores líderes</span><span>Devoluciones simples durante 30 días</span>
+    </section>
+
+    <section class="section products-section" id="productos">
+      <div class="section__header reveal">
+        <span class="eyebrow">La colección</span>
+        <div>
+          <h2>Accesorios seleccionados para elevar cada detalle.</h2>
+          <p>Filtra, compara y encuentra la pieza precisa para tu forma de trabajar.</p>
+        </div>
+      </div>
+
+      <div class="catalog-toolbar reveal">
+        <div class="search-wrap">
+          <label class="sr-only" for="searchInput">Buscar productos</label>
+          <input id="searchInput" type="search" autocomplete="off" placeholder="Buscar por nombre, estilo o función">
+          <button class="search-action" id="voiceSearch" type="button" aria-label="Buscar por voz" title="Buscar por voz">⌁</button>
+        </div>
+        <button class="btn btn-secondary filter-button" id="filterToggle" type="button" aria-expanded="false" aria-controls="advancedFilters">Filtros avanzados</button>
+        <label class="sort-wrap" for="sortSelect">Ordenar
+          <select id="sortSelect">
+            <option value="featured">Recomendados</option>
+            <option value="price-asc">Precio: menor a mayor</option>
+            <option value="price-desc">Precio: mayor a menor</option>
+            <option value="rating">Mejor valorados</option>
+            <option value="new">Novedades</option>
+            <option value="discount">Mayor descuento</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="filters-panel" id="advancedFilters" hidden>
+        <fieldset>
+          <legend>Categoría</legend>
+          <div class="filters__tags" role="group" aria-label="Categorías">
+            <button class="tag-btn active" data-category="all" type="button">Todo</button>
+            <button class="tag-btn" data-category="audio" type="button">Audio</button>
+            <button class="tag-btn" data-category="power" type="button">Energía</button>
+            <button class="tag-btn" data-category="wearable" type="button">Wearables</button>
+            <button class="tag-btn" data-category="desk" type="button">Escritorio</button>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Precio máximo: <output id="priceOutput">$250</output></legend>
+          <input id="priceRange" type="range" min="40" max="250" value="250" step="5">
+        </fieldset>
+        <fieldset>
+          <legend>Valoración mínima</legend>
+          <select id="ratingFilter"><option value="0">Cualquiera</option><option value="4.5">4.5 estrellas</option><option value="4.7">4.7 estrellas</option><option value="4.8">4.8 estrellas</option></select>
+        </fieldset>
+        <fieldset>
+          <legend>Disponibilidad</legend>
+          <label><input id="inStockFilter" type="checkbox"> Solo disponibles</label>
+          <label><input id="lowStockFilter" type="checkbox"> Últimas unidades</label>
+        </fieldset>
+        <button class="text-button" id="clearFilters" type="button">Limpiar filtros</button>
+      </div>
+
+      <p class="results-count" id="resultsCount" aria-live="polite"></p>
+      <div class="products-grid" id="productGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyProducts" hidden><strong>No encontramos productos con esos filtros.</strong><button class="text-button" id="emptyReset" type="button">Restablecer catálogo</button></div>
+    </section>
+
+    <section class="section" id="destacados">
+      <div class="section__header reveal">
+        <span class="eyebrow">Los favoritos de LUXORA</span>
+        <div><h2>Populares ahora.</h2><p>Los modelos que están definiendo espacios de trabajo más personales.</p></div>
+      </div>
+      <div class="product-rail reveal" id="popularRail"></div>
+    </section>
+
+    <section class="section" id="recommendations" hidden>
+      <div class="section__header reveal"><span class="eyebrow">Para ti</span><div><h2>También te puede gustar.</h2><p>Recomendaciones basadas únicamente en tu navegación en este dispositivo.</p></div></div>
+      <div class="product-rail reveal" id="recommendationRail"></div>
+    </section>
+
+    <section class="section" id="recentlyViewed" hidden>
+      <div class="section__header reveal"><span class="eyebrow">Tu selección</span><div><h2>Vistos recientemente.</h2><p>Retoma donde lo dejaste.</p></div></div>
+      <div class="product-rail reveal" id="recentRail"></div>
+    </section>
+
+    <section class="section featured-card reveal">
+      <div class="featured-card__media"><img src="michael-soledad-lWlJLgJoq68-unsplash.jpg" alt="Base de carga Halo Charge Stand" loading="lazy"></div>
+      <div class="featured-card__content">
+        <span class="eyebrow">Pieza insignia</span>
+        <h2>Halo Charge Stand</h2>
+        <p>Alineación magnética, enfriamiento inteligente y una silueta pensada para dispositivos que merecen mostrarse.</p>
+        <ul><li>Compatible con MagSafe</li><li>Carga inalámbrica y USB‑C</li><li>18 meses de garantía</li></ul>
+        <button class="btn btn-primary" data-product-open="2" type="button">Personalizar Halo</button>
+      </div>
+    </section>
+
+    <section class="section benefits">
+      <div class="benefits-grid reveal">
+        <article class="benefit-card"><span>↗</span><h3>Envío estimado</h3><p>Calcula coste, impuestos y fecha antes de finalizar tu pedido.</p></article>
+        <article class="benefit-card"><span>◇</span><h3>Calidad garantizada</h3><p>Materiales cuidados, 30 días de devolución y cobertura premium.</p></article>
+        <article class="benefit-card"><span>◌</span><h3>Compra a tu manera</h3><p>Lista de deseos, comparador, moneda e idioma sin perder tu selección.</p></article>
+        <article class="benefit-card"><span>◈</span><h3>Atención humana</h3><p>Centro de ayuda, chat y seguimiento visible desde tu perfil.</p></article>
+      </div>
+    </section>
+
+    <section class="section journal" id="journal">
+      <div class="section__header reveal"><span class="eyebrow">LUXORA Journal</span><div><h2>Ideas para un espacio que se siente tuyo.</h2><p>El blog está preparado para publicaciones y guías de producto.</p></div></div>
+      <div class="journal-grid reveal">
+        <article><img src="studio-proper-EfwdRR4OYAM-unsplash.jpg" alt="" loading="lazy"><span>Guías</span><h3>Cómo crear un escritorio más tranquilo</h3><button class="text-button" data-open-info="journal" type="button">Leer artículo</button></article>
+        <article><img src="supratik-deshmukh-iO0I6-mhDEY-unsplash.jpg" alt="" loading="lazy"><span>Diseño</span><h3>La utilidad de los objetos bien hechos</h3><button class="text-button" data-open-info="journal" type="button">Leer artículo</button></article>
+        <article><img src="luke-peterson-lUMj2Zv5HUE-unsplash.jpg" alt="" loading="lazy"><span>Novedades</span><h3>La luz que acompaña tus horas de enfoque</h3><button class="text-button" data-open-info="journal" type="button">Leer artículo</button></article>
+      </div>
+    </section>
+
+    <section class="section newsletter reveal">
+      <div><span class="eyebrow">Acceso anticipado</span><h2>Recibe lanzamientos y beneficios exclusivos.</h2><p>Consentimiento claro, sin listas de correo invasivas.</p></div>
+      <form id="newsletterForm" class="newsletter__form" novalidate>
+        <label class="sr-only" for="newsletterEmail">Correo electrónico</label>
+        <input id="newsletterEmail" type="email" placeholder="tu@email.com" required>
+        <button class="btn btn-primary" type="submit">Suscribirme</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <div><p class="eyebrow">LUXORA</p><strong>Tecnología elegante para el escritorio moderno.</strong></div>
+      <nav class="footer__links" aria-label="Enlaces informativos">
+        <button data-open-info="about" type="button">Sobre nosotros</button>
+        <button data-open-info="contact" type="button">Contacto y ubicación</button>
+        <button data-open-info="tracking" type="button">Rastrear pedido</button>
+        <button data-open-info="help" type="button">Centro de ayuda</button>
+        <button data-open-info="returns" type="button">Devoluciones y garantía</button>
+        <button data-open-info="privacy" type="button">Privacidad</button>
+        <button data-open-info="terms" type="button">Términos</button>
+      </nav>
+    </div>
+    <div class="footer__bottom"><p>© 2026 LUXORA. Todos los derechos reservados.</p><button class="text-button" id="cookieSettings" type="button">Preferencias de cookies</button></div>
+  </footer>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="drawer-head"><div><span class="eyebrow">Tu selección</span><h2>Carrito</h2></div><button class="icon-btn" data-close-cart type="button" aria-label="Cerrar carrito">×</button></div>
+    <div class="cart-drawer__body" id="cartItems"></div>
+    <section class="cart-progress" id="shippingProgress" aria-live="polite"></section>
+    <div class="coupon-box"><label for="couponInput">Cupón o gift card</label><div><input id="couponInput" autocomplete="off" placeholder="LUXORA10"><button class="btn btn-secondary" id="couponApply" type="button">Aplicar</button></div><p id="couponMessage"></p></div>
+    <div class="cart-summary" id="cartSummary"></div>
+    <button class="btn btn-primary btn-full" id="checkoutButton" type="button">Finalizar compra</button>
+  </aside>
+
+  <div class="modal" id="productModal" hidden role="dialog" aria-modal="true" aria-labelledby="productTitle"><div class="modal__panel modal__panel--product"><button class="icon-btn modal-close" data-close-modal="productModal" type="button" aria-label="Cerrar producto">×</button><div id="productModalContent"></div></div></div>
+  <div class="modal" id="accountModal" hidden role="dialog" aria-modal="true" aria-labelledby="accountTitle"><div class="modal__panel"><button class="icon-btn modal-close" data-close-modal="accountModal" type="button" aria-label="Cerrar cuenta">×</button><div id="accountModalContent"></div></div></div>
+  <div class="modal" id="compareModal" hidden role="dialog" aria-modal="true" aria-labelledby="compareTitle"><div class="modal__panel modal__panel--wide"><button class="icon-btn modal-close" data-close-modal="compareModal" type="button" aria-label="Cerrar comparador">×</button><div id="compareModalContent"></div></div></div>
+  <div class="modal" id="checkoutModal" hidden role="dialog" aria-modal="true" aria-labelledby="checkoutTitle"><div class="modal__panel"><button class="icon-btn modal-close" data-close-modal="checkoutModal" type="button" aria-label="Cerrar checkout">×</button><div id="checkoutModalContent"></div></div></div>
+  <div class="modal" id="infoModal" hidden role="dialog" aria-modal="true" aria-labelledby="infoTitle"><div class="modal__panel"><button class="icon-btn modal-close" data-close-modal="infoModal" type="button" aria-label="Cerrar">×</button><div id="infoModalContent"></div></div></div>
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="support-chat" id="supportChat" aria-label="Asistente de LUXORA">
+    <button class="chat-toggle" id="chatToggle" type="button" aria-expanded="false">✦ <span>¿Necesitas ayuda?</span></button>
+    <div class="chat-panel" id="chatPanel" hidden><div class="chat-head"><strong>Asistente LUXORA</strong><button class="icon-btn" id="chatClose" type="button" aria-label="Cerrar chat">×</button></div><div class="chat-log" id="chatLog" aria-live="polite"><p>Hola. Puedo ayudarte con envíos, devoluciones y productos.</p></div><div class="chat-suggestions"><button data-chat="envío" type="button">Envío</button><button data-chat="devolución" type="button">Devolución</button><button data-chat="pagos" type="button">Pagos</button></div><form id="chatForm"><label class="sr-only" for="chatInput">Escribe un mensaje</label><input id="chatInput" autocomplete="off" placeholder="Escribe tu consulta"><button type="submit" aria-label="Enviar mensaje">↑</button></form></div>
+  </aside>
+
+  <a class="whatsapp-float" href="https://wa.me/50670000000?text=Hola%20LUXORA%2C%20necesito%20ayuda." target="_blank" rel="noopener noreferrer" aria-label="Hablar por WhatsApp con LUXORA">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 3.6A11.5 11.5 0 0 0 2.7 17.5L1.5 22.5l5.1-1.2A11.5 11.5 0 1 0 20.5 3.6Zm-8.5 17a9.3 9.3 0 0 1-4.7-1.3l-.3-.2-3 .7.7-2.9-.2-.3A9.3 9.3 0 1 1 12 20.6Zm5.1-7c-.3-.2-1.7-.9-2-.9s-.5-.1-.7.2-.8.9-.9 1.1-.3.3-.6.1a7.5 7.5 0 0 1-2.2-1.4 8.3 8.3 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.5-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5L9.3 7c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.8.4s-1 1-1 1.5 1 2.1 1.2 2.4a10.5 10.5 0 0 0 4 3.7c.5.2.9.4 1.2.5.5.2.9.2 1.4.1.4-.1 1.7-.7 1.9-1.3.2-.6.2-1.1.2-1.2s-.2-.2-.5-.3Z"/></svg><span>WhatsApp</span>
+  </a>
+  <section class="cookie-banner" id="cookieBanner" hidden aria-labelledby="cookieTitle"><div><h2 id="cookieTitle">Tu privacidad, primero</h2><p>Usamos almacenamiento esencial para carrito y preferencias. Las mediciones y marketing permanecen desactivados sin tu consentimiento.</p></div><div class="cookie-actions"><button class="btn btn-secondary" id="cookieCustomize" type="button">Personalizar</button><button class="btn btn-primary" id="cookieAccept" type="button">Aceptar selección</button></div></section>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -35,3 +35,21 @@
 .orb-two{animation-delay:-5s}.floating-note{animation:norte-note-float 5s ease-in-out infinite}.note-bottom{animation-delay:-2.4s}
 @media(max-width:680px){.demo-preview-stack{min-width:72px}.demo-preview-stack i{width:31px;height:31px}.browser-card,.hero-orb,.floating-note{animation:none}}
 @media(prefers-reduced-motion:reduce){.browser-card,.hero-orb,.floating-note{animation:none}.project-image,.brand .brand-mark,.demo-preview-stack i,.theme-icon{transition:none}}
+
+/* Five-demo portfolio upgrade. */
+.demo-preview-stack i:nth-child(4){background-image:url("../demos/cafe-brisa/assets/cafe-brisa-triptych.png");background-position:center}.demo-preview-stack i:nth-child(5){background-image:url("../demos/luxora/hero.jpg");background-position:center}
+.project-grid-five{grid-template-columns:repeat(6,minmax(0,1fr));gap:20px}
+.project-grid-five .project-card{grid-column:span 2}
+.project-grid-five .project-card:nth-child(n+4){grid-column:span 3}
+.project-cafe .project-image{background-image:url("../demos/cafe-brisa/assets/cafe-brisa-triptych.png");background-position:center}
+.project-luxora .project-image{background-image:url("../demos/luxora/hero.jpg");background-position:center}
+.project-cafe .project-image::after{background:linear-gradient(165deg,rgba(53,27,13,.42),rgba(53,27,13,.05) 55%,rgba(44,22,11,.8))}
+.project-luxora .project-image::after{background:linear-gradient(165deg,rgba(5,10,29,.56),rgba(5,10,29,.05) 55%,rgba(5,10,29,.84))}
+.project-cafe .project-details span{color:#94542b}.project-luxora .project-details span{color:#4264d7}
+.portfolio-note{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:18px;align-items:center;margin-top:28px;padding:18px 21px;border:1px solid var(--line);border-radius:16px;background:color-mix(in srgb,var(--surface) 85%,var(--soft));box-shadow:0 13px 35px rgba(16,34,55,.05)}
+.portfolio-note-mark{display:grid;place-items:center;width:39px;height:39px;border-radius:12px 12px 12px 4px;background:var(--brand);color:#102237;font-weight:900;transform:rotate(-7deg)}
+.portfolio-note p{margin:0;color:var(--muted);font-size:.84rem;line-height:1.55}.portfolio-note strong{color:var(--ink)}
+.portfolio-note a{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;color:var(--ink);font-size:.82rem;font-weight:800}.portfolio-note a span{color:var(--brand-deep);font-size:1.15rem;transition:transform .2s ease}.portfolio-note a:hover span{transform:translateX(4px)}
+.project-grid-five .project-image{min-height:340px}.project-grid-five .project-card:nth-child(n+4) .project-image{min-height:390px}
+@media(max-width:900px){.project-grid-five{grid-template-columns:repeat(2,minmax(0,1fr))}.project-grid-five .project-card,.project-grid-five .project-card:nth-child(n+4){grid-column:auto}.project-grid-five .project-card:last-child{grid-column:span 2}.project-grid-five .project-card:nth-child(n+4) .project-image{min-height:340px}}
+@media(max-width:620px){.project-grid-five{grid-template-columns:1fr}.project-grid-five .project-card:last-child{grid-column:auto}.project-grid-five .project-image,.project-grid-five .project-card:nth-child(n+4) .project-image{min-height:315px}.portfolio-note{grid-template-columns:auto 1fr;gap:12px;padding:16px}.portfolio-note a{grid-column:2}.demo-preview-stack i:nth-child(4),.demo-preview-stack i:nth-child(5){display:none}}
