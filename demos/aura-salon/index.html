@@ -1,12 +1,55 @@
 <!doctype html>
 <html lang="es">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Aura Studio | Demo</title><link rel="stylesheet" href="../demo.css"><style>:root{--accent:#d98467;--surface:#f9e9e3}</style></head>
-<body>
-  <div class="notice">DEMO · Marca ficticia creada para portafolio</div>
-  <div class="wrap">
-    <nav class="nav"><a href="../../">← Norte Web</a><strong>AURA STUDIO</strong><a href="#reserva">Reservar</a></nav>
-    <section class="hero"><div><span class="eyebrow">Belleza y bienestar</span><h1>Tu momento para cuidarte.</h1><p class="lead">Una landing que presenta servicios, crea confianza y dirige cada visita hacia una reserva rápida por WhatsApp.</p><a class="cta" href="#reserva">Agendar cita →</a></div><div class="art aura-art"><div class="art-copy">Pausa.<br>Respira.<br>Brilla.</div></div></section>
-    <section class="grid"><article class="card"><span>01</span><h2>Servicios claros</h2><p>Tratamientos destacados, tiempos y una invitación directa para reservar.</p></article><article class="card"><span>02</span><h2>Confianza visual</h2><p>Una estética cálida con espacio para fotos reales del negocio.</p></article><article class="card"><span>03</span><h2>Reserva simple</h2><p>Un botón visible que evita que el cliente tenga que buscar cómo contactarte.</p></article></section>
-  </div>
-  <section id="reserva" class="bottom"><div class="wrap"><h2>Un buen servicio merece una buena primera impresión.</h2><a class="cta" href="../../#contacto">Quiero una página así</a></div></section>
-</body></html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Demo de una página web para salón de belleza creada por Norte Web.">
+    <title>Aura Studio — Demo de Norte Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../demo.css">
+  </head>
+  <body style="--accent:#e17a57;--accent-soft:#f9e2db;--deep:#442936;">
+    <div class="demo-ribbon">DEMO DE PORTAFOLIO · MARCA FICTICIA</div>
+    <header class="demo-header">
+      <div class="demo-shell demo-header-inner">
+        <a class="demo-brand" href="../../" aria-label="Volver a Norte Web"><span class="demo-brand-mark">N</span><span>Aura Studio<small>Beauty &amp; care</small></span></a>
+        <nav class="demo-nav" aria-label="Navegación de Aura Studio"><a href="#servicios">Servicios</a><a href="#experiencia">Experiencia</a><a href="#proceso">Cómo reservar</a><a href="#contacto">Reservar cita ↗</a></nav>
+        <div class="demo-actions-header"><button class="demo-theme" type="button" data-demo-theme aria-label="Cambiar tema" aria-pressed="false">☾</button><button class="demo-menu" type="button" data-demo-menu aria-label="Abrir menú" aria-expanded="false">☰</button></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="demo-shell demo-hero">
+        <div>
+          <p class="demo-eyebrow"><i></i>Un espacio para tu ritmo</p>
+          <h1>Tu momento <strong>para cuidarte.</strong></h1>
+          <p class="demo-copy">Tratamientos pensados para que te sientas cómoda, escuchada y renovada. Belleza que se adapta a ti, sin prisas.</p>
+          <div class="demo-buttons"><a class="demo-button" href="#contacto">Reservar mi cita <span>→</span></a><a class="demo-inline" href="#servicios">Ver tratamientos</a></div>
+          <div class="demo-mini-proof"><span class="mini-avatars"><i></i><i></i><i></i></span><span><b>Experiencia cercana</b><br>desde la primera consulta</span></div>
+        </div>
+        <div class="demo-media aura-media" aria-label="Vista previa de Aura Studio">
+          <div class="media-float float-top"><span class="float-icon">✦</span>Atención personalizada</div>
+          <div class="demo-screen"><div class="screen-content"><small>AURA STUDIO</small><h2>Tu cuidado, a tu manera.</h2><span class="screen-chip">Conoce el estudio →</span></div></div>
+          <div class="media-float float-bottom"><span class="float-icon">◷</span>Horarios flexibles</div>
+        </div>
+      </section>
+
+      <section class="demo-stat-strip"><div class="demo-shell stat-inner"><div class="demo-stat"><b>01</b><span>mensaje para reservar</span></div><div class="demo-stat"><b>100%</b><span>adaptada a celular</span></div><div class="demo-stat"><b>24/7</b><span>información disponible</span></div></div></section>
+
+      <section class="demo-shell demo-section" id="servicios">
+        <p class="section-kicker">Tratamientos destacados</p><h2 class="section-title">Un menú simple, <em>una decisión fácil.</em></h2><p class="section-lead">Cada servicio se explica en pocas palabras para que las personas entiendan qué elegir antes de escribir.</p>
+        <div class="service-grid"><article class="service-card"><b>01</b><h3>Manicure &amp; nails</h3><p>Color, cuidado y detalles que hacen que tus manos hablen por ti.</p></article><article class="service-card"><b>02</b><h3>Faciales</h3><p>Rutinas suaves enfocadas en la luminosidad y el bienestar de tu piel.</p></article><article class="service-card"><b>03</b><h3>Rituales de spa</h3><p>Un espacio para pausar, respirar y salir con energía renovada.</p></article></div>
+      </section>
+
+      <section class="demo-section demo-section-tint" id="experiencia"><div class="demo-shell split-showcase"><div class="showcase-art aura-showcase"><div class="showcase-panel"><small>UNA EXPERIENCIA CUIDADA</small><p>El diseño transmite calma antes incluso de entrar al estudio.</p></div></div><div class="showcase-copy"><p class="section-kicker">Diseñada para conectar</p><h2 class="section-title">Una página que se siente <em>tan bien</em> como el servicio.</h2><ul class="check-list"><li><b>✓</b>Servicios claros para elegir con confianza</li><li><b>✓</b>Galería visual para mostrar el ambiente</li><li><b>✓</b>Reserva directa desde WhatsApp</li></ul></div></div></section>
+
+      <section class="demo-shell demo-section" id="proceso"><p class="section-kicker">Reservar no tiene que ser difícil</p><h2 class="section-title">Tres pasos y <em>listo.</em></h2><div class="demo-steps"><article class="demo-step"><b>01</b><h3>Elige tu servicio</h3><p>Explora tratamientos y encuentra el que mejor se adapta a tu momento.</p></article><article class="demo-step"><b>02</b><h3>Escríbenos</h3><p>Un botón visible abre la conversación sin formularios eternos.</p></article><article class="demo-step"><b>03</b><h3>Confirma tu cita</h3><p>Recibe opciones de horario y deja todo listo en pocos mensajes.</p></article></div></section>
+
+      <section class="demo-cta" id="contacto"><div class="demo-shell cta-inner"><div><p class="section-kicker">¿Lista para tu momento Aura?</p><h2 class="section-title">La próxima cita puede empezar con un <em>hola.</em></h2></div><div class="cta-side"><a class="demo-button" href="../../#contacto">Quiero una web así <span>→</span></a><small>Esta es una demo creada por Norte Web.</small></div></div></section>
+    </main>
+    <footer class="demo-footer"><div class="demo-shell footer-inner"><strong>Aura Studio</strong><p class="demo-note">Marca ficticia · Demo de portafolio</p><a href="../../#portafolio">← Ver más demos</a></div></footer>
+    <script src="../demo.js"></script>
+  </body>
+</html>
