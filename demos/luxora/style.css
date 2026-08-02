@@ -102,6 +102,9 @@ a { color: inherit; text-decoration: none; }
 .close-button { position: absolute; top: 22px; right: 22px; }
 
 .section { width: var(--page); margin: 0 auto; padding: clamp(62px,8vw,120px) 0; }
+@supports (content-visibility: auto) {
+  .products-section, #destacados, #recommendations, #recentlyViewed, .featured-card, .benefits, .journal, .newsletter { content-visibility: auto; contain-intrinsic-size: auto 760px; }
+}
 .hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(370px,.95fr); gap: clamp(38px,7vw,100px); align-items: center; min-height: 630px; padding-top: 64px; }
 .hero h1, h2, h3, p { overflow-wrap: break-word; }
 .hero h1 { max-width: 690px; margin: 0; letter-spacing: -.065em; font-size: clamp(2.8rem,6.1vw,5.45rem); line-height: .98; }
@@ -435,6 +438,7 @@ html[lang="en"] .footer::after { content: "Demo created by Norte Web"; }
   .navbar__actions .icon-btn { width: 33px; height: 33px; }
   .hero { grid-template-columns: 1fr; min-height: 0; padding-top: 43px; }
   .hero__visual, .hero__visual img { min-height: 360px; }
+  .hero__visual-hint, .card-tag, .stock-label, .card-actions .icon-btn { backdrop-filter: none; }
   .trust-strip { grid-template-columns: 1fr; }
   .trust-strip span { padding: 13px; }
   .section { padding: 60px 0; }

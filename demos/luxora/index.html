@@ -19,6 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="style.css">
+  <link rel="preload" as="image" href="products/halo-charge-stand.webp" fetchpriority="high">
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -99,7 +100,7 @@
       </div>
       <button class="hero__visual reveal" id="heroPreview" type="button" aria-label="Abrir vista del producto destacado">
         <span class="hero__label">LUXORA</span>
-        <img src="products/halo-charge-stand.png" alt="Base de carga Halo Charge Stand sobre fondo oscuro" fetchpriority="high">
+        <img src="products/halo-charge-stand.webp" alt="Base de carga Halo Charge Stand sobre fondo oscuro" width="1122" height="1402" fetchpriority="high" decoding="async">
         <span class="hero__visual-hint">Explorar en 360°</span>
       </button>
     </section>
@@ -187,7 +188,7 @@
     </section>
 
     <section class="section featured-card reveal">
-      <div class="featured-card__media"><img src="products/halo-charge-stand.png" alt="Base de carga Halo Charge Stand" loading="lazy"></div>
+      <div class="featured-card__media"><img src="products/halo-charge-stand.webp" alt="Base de carga Halo Charge Stand" loading="lazy" decoding="async" fetchpriority="low"></div>
       <div class="featured-card__content">
         <span class="eyebrow">Pieza insignia</span>
         <h2>Halo Charge Stand</h2>
@@ -209,9 +210,9 @@
     <section class="section journal" id="journal">
       <div class="section__header reveal"><span class="eyebrow">Ideas LUXORA</span><div><h2>Ideas para un espacio que se siente tuyo.</h2><p>El blog está preparado para publicaciones y guías de producto.</p></div></div>
       <div class="journal-grid reveal">
-        <article><img src="products/flux-desk-pad.png" alt="Escritorio con Desk Pad Flux" loading="lazy"><span>Guías</span><h3>Cómo crear un escritorio más tranquilo</h3><button class="text-button" data-open-info="journal" type="button">Leer artículo</button></article>
-        <article><img src="products/aero-laptop-stand.png" alt="Soporte de portátil Aero" loading="lazy"><span>Diseño</span><h3>La utilidad de los objetos bien hechos</h3><button class="text-button" data-open-info="journal" type="button">Leer artículo</button></article>
-        <article><img src="products/lumen-desk-lamp.png" alt="Lámpara de escritorio Lumen" loading="lazy"><span>Novedades</span><h3>La luz que acompaña tus horas de enfoque</h3><button class="text-button" data-open-info="journal" type="button">Leer artículo</button></article>
+        <article><img src="products/flux-desk-pad.webp" alt="Escritorio con Desk Pad Flux" loading="lazy" decoding="async" fetchpriority="low"><span>Guías</span><h3>Cómo crear un escritorio más tranquilo</h3><button class="text-button" data-open-info="journal" type="button">Leer artículo</button></article>
+        <article><img src="products/aero-laptop-stand.webp" alt="Soporte de portátil Aero" loading="lazy" decoding="async" fetchpriority="low"><span>Diseño</span><h3>La utilidad de los objetos bien hechos</h3><button class="text-button" data-open-info="journal" type="button">Leer artículo</button></article>
+        <article><img src="products/lumen-desk-lamp.webp" alt="Lámpara de escritorio Lumen" loading="lazy" decoding="async" fetchpriority="low"><span>Novedades</span><h3>La luz que acompaña tus horas de enfoque</h3><button class="text-button" data-open-info="journal" type="button">Leer artículo</button></article>
       </div>
     </section>
 

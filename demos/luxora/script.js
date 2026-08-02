@@ -27,14 +27,14 @@
   };
 
   var image = {
-    audio: 'products/aria-pro-buds.png',
-    power: 'products/halo-charge-stand.png',
-    wearable: 'products/noir-smart-strap.png',
-    desk: 'products/flux-desk-pad.png',
-    cable: 'products/pulse-cable-kit.png',
-    speaker: 'products/edge-audio-bar.png',
-    stand: 'products/aero-laptop-stand.png',
-    lamp: 'products/lumen-desk-lamp.png'
+    audio: 'products/aria-pro-buds.webp',
+    power: 'products/halo-charge-stand.webp',
+    wearable: 'products/noir-smart-strap.webp',
+    desk: 'products/flux-desk-pad.webp',
+    cable: 'products/pulse-cable-kit.webp',
+    speaker: 'products/edge-audio-bar.webp',
+    stand: 'products/aero-laptop-stand.webp',
+    lamp: 'products/lumen-desk-lamp.webp'
   };
 
   var products = [
@@ -484,7 +484,7 @@
     var compared = state.compare.indexOf(product.id) !== -1;
     return '<article class="product-card" data-product-card="' + product.id + '">' +
       '<button class="product-card__media" data-product-open="' + product.id + '" type="button" aria-label="Ver ' + esc(product.name) + '">' +
-        '<img src="' + esc(product.images[0]) + '" alt="' + esc(product.name) + '" loading="lazy" decoding="async">' +
+        '<img src="' + esc(product.images[0]) + '" alt="' + esc(product.name) + '" loading="lazy" decoding="async" fetchpriority="low">' +
         '<span class="card-tag">' + esc(product.tag) + '</span><span class="stock-label ' + stockClass + '">' + stockText + '</span>' +
       '</button>' +
       '<div class="card-actions"><button class="icon-btn ' + (wished ? 'active' : '') + '" data-wishlist-toggle="' + product.id + '" type="button" aria-label="Lista de deseos">♥</button><button class="icon-btn ' + (compared ? 'active' : '') + '" data-compare-toggle="' + product.id + '" type="button" aria-label="Comparar">⇄</button></div>' +
@@ -1055,7 +1055,7 @@
       toast('El precio no es válido.');
       return;
     }
-    var product = { id: Date.now(), slug: 'producto-demo-' + Date.now(), name: name.trim(), category: 'desk', tag: 'Demo', description: 'Producto creado localmente desde el panel de demostración.', price: requested, oldPrice: requested, rating: 4.5, reviews: 0, popularity: 1, isNew: true, images: ['1.jpg'], variants: [{ name: 'Opción', values: [{ value: 'Estándar', stock: 10 }] }] };
+    var product = { id: Date.now(), slug: 'producto-demo-' + Date.now(), name: name.trim(), category: 'desk', tag: 'Demo', description: 'Producto creado localmente desde el panel de demostración.', price: requested, oldPrice: requested, rating: 4.5, reviews: 0, popularity: 1, isNew: true, images: ['products/halo-charge-stand.webp'], variants: [{ name: 'Opción', values: [{ value: 'Estándar', stock: 10 }] }] };
     state.customProducts.push(product);
     state.inventory[stockKey(product, product.variants[0], 'Estándar')] = 10;
     save('custom-products', state.customProducts);
@@ -1406,7 +1406,6 @@
     id('currencySelect').value = state.currency;
     applyTheme();
     renderCatalog();
-    renderRails();
     renderCart();
     applyLanguage();
     setupSearch();
@@ -1416,6 +1415,9 @@
     setupPWA();
     setupEvents();
     reveal();
+    var renderSecondaryContent = function () { renderRails(); };
+    if ('requestIdleCallback' in window) window.requestIdleCallback(renderSecondaryContent, { timeout: 900 });
+    else window.setTimeout(renderSecondaryContent, 180);
     var params = new URLSearchParams(location.hash.slice(1));
     var slug = params.get('product');
     var initial = allProducts().find(function (product) { return product.slug === slug; });
