@@ -29,7 +29,15 @@
     progress.style.setProperty('--demo-scroll', `${value}%`);
   };
   updateProgress();
-  window.addEventListener('scroll', updateProgress, { passive: true });
+  let scrollPending = false;
+  window.addEventListener('scroll', () => {
+    if (scrollPending) return;
+    scrollPending = true;
+    requestAnimationFrame(() => {
+      updateProgress();
+      scrollPending = false;
+    });
+  }, { passive: true });
 
   const revealItems = [...document.querySelectorAll('.demo-section, .demo-faq, .demo-proof-section, .demo-stat-strip')];
   revealItems.forEach((item) => item.classList.add('demo-reveal'));
@@ -62,4 +70,16 @@
   document.querySelectorAll('[data-year]').forEach((node) => {
     node.textContent = new Date().getFullYear();
   });
+
+  document.querySelectorAll('.service-photo img').forEach((image) => {
+    image.src = image.src.replace(/-services-triptych\.png$/i, '-services-triptych.webp');
+  });
+
+  const footer = document.querySelector('.demo-footer .footer-inner');
+  if (footer) {
+    const social = document.createElement('div');
+    social.className = 'norte-demo-social';
+    social.innerHTML = '<span>Creada por Norte Web</span><a href="https://www.instagram.com/nortewebcr/" target="_blank" rel="noreferrer">Instagram ↗</a><a href="https://www.facebook.com/nortewebcr" target="_blank" rel="noreferrer">Facebook ↗</a>';
+    footer.append(social);
+  }
 })();

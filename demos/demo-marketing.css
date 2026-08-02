@@ -1,0 +1,2 @@
+/* Shared conversion footer for the three service demos. */
+.norte-demo-social{display:flex;flex-wrap:wrap;gap:7px 12px;align-items:center;color:#a6b3b9;font-size:.72rem;font-weight:700}.norte-demo-social span{color:#fff}.norte-demo-social a{color:#d9e4e7;text-decoration:underline;text-underline-offset:3px}@supports (content-visibility:auto){.demo-faq,.demo-proof-section,.demo-cta{content-visibility:auto;contain-intrinsic-size:auto 650px}}@media(max-width:650px){.norte-demo-social{justify-content:center}}
