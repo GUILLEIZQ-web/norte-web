@@ -545,7 +545,7 @@
     id('wishlistCount').textContent = state.wishlist.length;
     id('compareCount').textContent = state.compare.length;
     id('cartItems').innerHTML = items.length ? items.map(function (item) {
-      return '<article class="cart-item"><img src="' + esc(item.product.images[0]) + '" alt=""><div><h3>' + esc(item.product.name) + '</h3><p>' + Object.keys(item.selection).map(function (key) { return esc(item.selection[key]); }).join(' · ') + '</p><div class="cart-item__controls"><button data-cart-change="-1" data-cart-key="' + esc(item.key) + '" type="button" aria-label="Reducir cantidad">−</button><span>' + item.quantity + '</span><button data-cart-change="1" data-cart-key="' + esc(item.key) + '" type="button" aria-label="Aumentar cantidad">+</button><button data-cart-remove="' + esc(item.key) + '" type="button" aria-label="Eliminar">×</button></div></div><strong>' + money(item.product.price * item.quantity) + '</strong></article>';
+      return '<article class="cart-item"><img src="' + esc(item.product.images[0]) + '" alt="" loading="lazy" decoding="async"><div><h3>' + esc(item.product.name) + '</h3><p>' + Object.keys(item.selection).map(function (key) { return esc(item.selection[key]); }).join(' · ') + '</p><div class="cart-item__controls"><button data-cart-change="-1" data-cart-key="' + esc(item.key) + '" type="button" aria-label="Reducir cantidad">−</button><span>' + item.quantity + '</span><button data-cart-change="1" data-cart-key="' + esc(item.key) + '" type="button" aria-label="Aumentar cantidad">+</button><button data-cart-remove="' + esc(item.key) + '" type="button" aria-label="Eliminar">×</button></div></div><strong>' + money(item.product.price * item.quantity) + '</strong></article>';
     }).join('') : '<p class="cart-empty">Tu carrito está vacío. Guarda tus favoritos o explora la colección.</p>';
     var remaining = Math.max(0, 200 - calculated.subtotal);
     id('shippingProgress').innerHTML = calculated.subtotal >= 200 && calculated.subtotal > 0 ? '✓ Ya tienes envío sin costo.<div class="progress-track"><span style="width:100%"></span></div>' : 'Añade ' + money(remaining) + ' para obtener envío sin costo.<div class="progress-track"><span style="width:' + Math.min(100, calculated.subtotal / 2) + '%"></span></div>';
@@ -1396,18 +1396,25 @@
     });
     id('overlay').addEventListener('click', function () { closeAll(); });
     document.addEventListener('keydown', function (event) { if (event.key === 'Escape') closeAll(); });
-    window.addEventListener('scroll', function () {
+    var scrollQueued = false;
+    function updateScrollInterface() {
       var max = document.documentElement.scrollHeight - window.innerHeight;
       id('readingProgress').style.width = (max > 0 ? window.scrollY / max * 100 : 0) + '%';
       id('navbar').classList.toggle('scrolled', window.scrollY > 18);
+      scrollQueued = false;
+    }
+    window.addEventListener('scroll', function () {
+      if (scrollQueued) return;
+      scrollQueued = true;
+      window.requestAnimationFrame(updateScrollInterface);
     }, { passive: true });
+    updateScrollInterface();
   }
   function init() {
     id('currencySelect').value = state.currency;
     applyTheme();
     renderCatalog();
     renderCart();
-    applyLanguage();
     setupSearch();
     setupVoice();
     setupChat();

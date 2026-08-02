@@ -217,10 +217,10 @@
     </section>
 
     <section class="section newsletter reveal">
-      <div><span class="eyebrow">Acceso anticipado</span><h2>Recibe lanzamientos y beneficios exclusivos.</h2><p>Consentimiento claro, sin listas de correo invasivas.</p></div>
+      <div class="newsletter__content"><span class="eyebrow">Acceso anticipado</span><h2>Recibe lanzamientos y beneficios exclusivos.</h2><p>Consentimiento claro, sin listas de correo invasivas.</p></div>
       <form id="newsletterForm" class="newsletter__form" novalidate>
         <label class="sr-only" for="newsletterEmail">Correo electrónico</label>
-        <input id="newsletterEmail" type="email" placeholder="tu@email.com" required>
+        <input id="newsletterEmail" type="email" placeholder="tu@email.com" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" enterkeyhint="send" required>
         <button class="btn btn-primary" type="submit">Suscribirme</button>
       </form>
     </section>

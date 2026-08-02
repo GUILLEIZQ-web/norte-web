@@ -1,5 +1,5 @@
 /* LUXORA offline shell. Bump CACHE_VERSION whenever core assets change. */
-const CACHE_VERSION = 'luxora-v3';
+const CACHE_VERSION = 'luxora-v4';
 const APP_SHELL = ['./', './index.html', './style.css', './script.js', './manifest.webmanifest', './assets/luxora-product.svg'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_VERSION).then(cache => cache.addAll(APP_SHELL)).then(() => self.skipWaiting()));
