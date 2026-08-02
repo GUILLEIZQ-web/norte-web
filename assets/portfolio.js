@@ -27,6 +27,8 @@
     if (hasWhatsApp) { el.href = `https://wa.me/${config.whatsapp}?text=${encodeURIComponent('Hola, vi Norte Web y me interesa una página para mi negocio.')}`; el.target = '_blank'; el.rel = 'noreferrer'; }
   });
   document.querySelectorAll('[data-email]').forEach((el) => { if (hasEmail) { el.textContent = config.email; el.href = `mailto:${config.email}`; } });
+  document.querySelectorAll('[data-instagram]').forEach((el) => { if (config.instagram) { el.href = config.instagram; el.target = '_blank'; el.rel = 'noreferrer'; } });
+  document.querySelectorAll('[data-facebook]').forEach((el) => { if (config.facebook) { el.href = config.facebook; el.target = '_blank'; el.rel = 'noreferrer'; } });
 
   menuButton?.addEventListener('click', () => { const open = menu.classList.toggle('open'); menuButton.classList.toggle('is-open', open); menuButton.setAttribute('aria-expanded', String(open)); });
   document.querySelectorAll('.nav-links a').forEach((link) => link.addEventListener('click', () => { menu?.classList.remove('open'); menuButton?.classList.remove('is-open'); menuButton?.setAttribute('aria-expanded', 'false'); }));
