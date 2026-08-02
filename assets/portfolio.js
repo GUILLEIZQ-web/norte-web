@@ -29,6 +29,19 @@
   document.querySelectorAll('[data-email]').forEach((el) => { if (hasEmail) { el.textContent = config.email; el.href = `mailto:${config.email}`; } });
   document.querySelectorAll('[data-instagram]').forEach((el) => { if (config.instagram) { el.href = config.instagram; el.target = '_blank'; el.rel = 'noreferrer'; } });
   document.querySelectorAll('[data-facebook]').forEach((el) => { if (config.facebook) { el.href = config.facebook; el.target = '_blank'; el.rel = 'noreferrer'; } });
+  document.querySelectorAll('[data-whatsapp-message]').forEach((el) => {
+    if (hasWhatsApp) { el.href = `https://wa.me/${config.whatsapp}?text=${encodeURIComponent(el.dataset.whatsappMessage)}`; el.target = '_blank'; el.rel = 'noreferrer'; }
+  });
+  const servicesNav = document.querySelector('.nav-links a[href="#servicios"]');
+  if (servicesNav) { servicesNav.href = '#soluciones'; servicesNav.textContent = 'Servicios'; }
+  const serviceImagePositions = ['left center', 'center center', 'right center'];
+  document.querySelectorAll('.solution-card').forEach((card, index) => {
+    const image = document.createElement('div');
+    image.className = 'solution-photo';
+    image.setAttribute('aria-hidden', 'true');
+    image.style.backgroundPosition = serviceImagePositions[index] || 'center';
+    card.querySelector('.solution-icon')?.replaceWith(image);
+  });
 
   menuButton?.addEventListener('click', () => { const open = menu.classList.toggle('open'); menuButton.classList.toggle('is-open', open); menuButton.setAttribute('aria-expanded', String(open)); });
   document.querySelectorAll('.nav-links a').forEach((link) => link.addEventListener('click', () => { menu?.classList.remove('open'); menuButton?.classList.remove('is-open'); menuButton?.setAttribute('aria-expanded', 'false'); }));
