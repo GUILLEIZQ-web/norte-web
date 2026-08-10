@@ -1,0 +1,13 @@
+DEMO: DAGSS WELLNESS
+
+Enlace al subir esta carpeta dentro de /demos en el repositorio del portafolio:
+https://norteweb.es-un.dev/demos/dagss-wellness/
+
+Contenido:
+- index.html
+- assets/site.css
+- assets/images/dagss-hero.png
+- assets/images/dagss-profile.png
+
+La demo usa rutas relativas y no necesita instalar nada. Conserva toda la carpeta
+dagss-wellness dentro de la carpeta demos de tu portafolio.
