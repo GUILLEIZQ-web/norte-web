@@ -1,0 +1,7 @@
+Experiencia Almare
+
+Esta carpeta es independiente y está lista para GitHub Pages.
+Copia la carpeta completa dentro de tu portafolio; no muevas solamente index.html.
+Ruta sugerida: demos/experiencia-almare/
+El enlace terminará con esa misma ruta y una barra final.
+Los botones de WhatsApp y los enlaces externos ya están configurados.
