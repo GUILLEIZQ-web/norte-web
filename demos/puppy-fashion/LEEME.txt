@@ -1,0 +1,12 @@
+PUPPY FASHION CR
+
+Esta carpeta contiene una demo independiente lista para tu portafolio.
+
+Ruta sugerida dentro de tu repositorio:
+demos/puppy-fashion/
+
+Enlace final después de subirla:
+https://norteweb.es-un.dev/demos/puppy-fashion/
+
+Conserva la carpeta completa: index.html, assets y .nojekyll.
+Todos los botones de WhatsApp están configurados para el +506 8516 2423.
