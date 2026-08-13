@@ -1,0 +1,11 @@
+KA PONO RESTORATIVE - DEMO PARA GITHUB PAGES
+
+1. Subí esta carpeta completa dentro de la carpeta "demos" de tu repositorio.
+2. Conservá exactamente el nombre: ka-pono-restorative
+3. La dirección quedará:
+   https://norteweb.es-un.dev/demos/ka-pono-restorative/
+
+La propuesta comunica restauración corporal, trabajo corporal japonés y técnica Anma.
+No presenta a Ka Pono como masaje, spa ni relajación.
+Incluye las dos fotografías suministradas y botones de WhatsApp configurados para 7231 7650.
+Antes de publicar el sitio final: confirmar la descripción profesional definitiva de cada técnica, horarios y cualquier dato de contacto.
