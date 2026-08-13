@@ -1,0 +1,9 @@
+FAARI'S BROW & LASHES — DEMO PARA GITHUB PAGES
+
+1. Sube esta carpeta completa a tu repositorio, por ejemplo dentro de demos/faaris-brow-lashes/.
+2. Conserva el archivo index.html y la carpeta assets.
+3. Al activar GitHub Pages, el enlace será similar a:
+   https://norteweb.es-un.dev/demos/faaris-brow-lashes/
+
+Los botones de reserva usan el WhatsApp público de Faari's.
+La franja superior identifica la página como una vista previa creada por Norte Web.
