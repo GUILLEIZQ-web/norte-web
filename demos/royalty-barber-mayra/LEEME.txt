@@ -1,0 +1,9 @@
+ROYALTY BARBER BY MAYRA BARBER — DEMO PARA GITHUB PAGES
+
+1. Sube esta carpeta completa a tu repositorio, por ejemplo dentro de demos/royalty-barber-mayra/.
+2. Conserva el archivo index.html y la carpeta assets.
+3. Al activar GitHub Pages, el enlace será similar a:
+   https://TU-USUARIO.github.io/TU-REPOSITORIO/demos/royalty-barber-mayra/
+
+El botón de reserva usa el WhatsApp público de Royalty Barber by Mayra Barber.
+La franja superior identifica el sitio como una vista previa de Norte Web.

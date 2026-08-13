@@ -1,0 +1,9 @@
+OLI SALÓN DE BELLEZA — DEMO PARA GITHUB PAGES
+
+1. Sube esta carpeta completa a tu repositorio, por ejemplo dentro de demos/oli-salon-belleza/.
+2. Conserva el archivo index.html y la carpeta assets.
+3. Al activar GitHub Pages, el enlace será similar a:
+   https://TU-USUARIO.github.io/TU-REPOSITORIO/demos/oli-salon-belleza/
+
+El botón de reserva usa el WhatsApp público de Oli Salón.
+La franja superior identifica el sitio como una vista previa de Norte Web.
