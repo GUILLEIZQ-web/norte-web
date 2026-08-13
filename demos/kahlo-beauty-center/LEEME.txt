@@ -1,0 +1,9 @@
+KAHLO BEAUTY CENTER - DEMO PARA GITHUB PAGES
+
+1. Subí esta carpeta completa dentro de la carpeta "demos" de tu repositorio.
+2. Conservá exactamente el nombre: kahlo-beauty-center
+3. La dirección quedará:
+   https://norteweb.es-un.dev/demos/kahlo-beauty-center/
+
+Incluye una imagen original de ambiente y botones de WhatsApp configurados para 6469 2272.
+Antes de publicar el sitio final: confirmar los servicios definitivos, fotografías, horarios, precios y enlaces de redes sociales.

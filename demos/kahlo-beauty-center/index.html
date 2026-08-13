@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>KAHLO Beauty Center | Demo</title>
+  <meta name="description" content="Demostración de propuesta web para KAHLO Beauty Center.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Prata&display=swap" rel="stylesheet">
+  <style>
+    :root { --espresso:#301d18; --terracotta:#a74f35; --clay:#d88765; --blush:#f3e7dc; --paper:#fffaf6; --ink:#402821; --muted:#76605a; }
+    * { box-sizing:border-box; } html { scroll-behavior:smooth; } body { margin:0; background:var(--paper); color:var(--ink); font-family:"DM Sans",sans-serif; } a { color:inherit; text-decoration:none; }
+    .preview { background:var(--espresso); color:#fff8f1; padding:10px 18px; text-align:center; text-transform:uppercase; letter-spacing:.09em; font-size:12px; }
+    .nav { width:min(1160px,calc(100% - 40px)); height:82px; margin:auto; display:flex; align-items:center; justify-content:space-between; }
+    .brand { font-family:"Prata",serif; color:var(--espresso); font-size:25px; letter-spacing:.14em; }.brand small { display:block; font-family:"DM Sans",sans-serif; color:var(--terracotta); font-size:9px; font-weight:700; letter-spacing:.3em; margin-top:5px; text-align:center; text-transform:uppercase; }
+    .nav-links { display:flex; gap:28px; color:#715d56; font-size:13px; }.button { display:inline-flex; align-items:center; justify-content:center; background:var(--espresso); color:white; border-radius:999px; padding:14px 21px; font-size:13px; font-weight:700; transition:.2s ease; }.button:hover { transform:translateY(-2px); background:var(--terracotta); }
+    .hero { min-height:620px; position:relative; overflow:hidden; display:grid; align-items:center; }.hero img { width:100%; height:100%; position:absolute; inset:0; object-fit:cover; }.hero::after { content:""; position:absolute; inset:0; background:linear-gradient(90deg,rgba(41,23,17,.91) 0%,rgba(41,23,17,.75) 39%,rgba(41,23,17,.2) 75%,rgba(41,23,17,.03)); }
+    .hero-content { position:relative; z-index:1; width:min(1160px,calc(100% - 40px)); margin:auto; color:#fff9f4; padding:70px 0; }.eyebrow { color:#efb095; text-transform:uppercase; letter-spacing:.17em; font-size:11px; font-weight:700; display:flex; align-items:center; gap:10px; }.eyebrow::before { content:""; width:30px; height:1px; background:#efb095; }
+    h1,h2,h3 { margin:0; font-family:"Prata",serif; font-weight:400; letter-spacing:-.06em; line-height:1.04; }h1 { max-width:710px; font-size:clamp(46px,7vw,80px); margin-top:23px; }.hero p { max-width:510px; color:#f5e8e0; font-size:18px; line-height:1.65; margin:25px 0 32px; }.button.light { background:#fff8f2; color:var(--espresso); }.button.light:hover { background:#f0b08f; }
+    .intro { width:min(1060px,calc(100% - 40px)); display:grid; grid-template-columns:.88fr 1.12fr; gap:80px; margin:auto; padding:107px 0 86px; }.intro .eyebrow { color:var(--terracotta); }.intro .eyebrow::before { background:var(--terracotta); }.intro h2 { margin-top:17px; font-size:clamp(36px,5.1vw,57px); }.intro p { color:var(--muted); line-height:1.75; font-size:17px; margin:17px 0 0; }
+    .services { background:var(--blush); padding:83px 20px; }.services-wrap { width:min(1120px,100%); margin:auto; }.section-head { display:flex; justify-content:space-between; align-items:end; gap:30px; margin-bottom:34px; }.section-head .eyebrow { color:var(--terracotta); }.section-head .eyebrow::before { background:var(--terracotta); }.section-head h2 { font-size:clamp(37px,5vw,57px); margin-top:16px; }.section-head p { color:var(--muted); max-width:320px; font-size:14px; line-height:1.65; margin:0; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }.card { min-height:245px; padding:28px; background:var(--paper); border:1px solid rgba(99,52,39,.12); display:flex; flex-direction:column; justify-content:space-between; }.card span { color:var(--terracotta); font-size:12px; letter-spacing:.16em; font-weight:700; }.card h3 { font-size:28px; }.card p { color:var(--muted); font-size:14px; line-height:1.62; margin:10px 0 0; }
+    .reservation { width:min(1060px,calc(100% - 40px)); padding:98px 0; margin:auto; display:grid; grid-template-columns:1fr 1fr; gap:58px; align-items:center; }.reservation h2 { font-size:clamp(37px,5vw,56px); }.reservation .eyebrow { color:var(--terracotta); }.reservation .eyebrow::before { background:var(--terracotta); }.reservation p { color:var(--muted); line-height:1.7; margin:17px 0 0; }.booking-card { background:var(--espresso); padding:37px; color:#fff8f2; position:relative; overflow:hidden; }.booking-card::after { content:"K"; position:absolute; right:-13px; bottom:-58px; color:rgba(255,255,255,.06); font-family:"Prata",serif; font-size:220px; line-height:1; }.booking-card h3 { font-size:30px; position:relative; z-index:1; }.booking-card p { color:#ead5ca; position:relative; z-index:1; margin:12px 0 24px; }.booking-card .button { position:relative; z-index:1; color:var(--espresso); background:#efb095; }.booking-card .button:hover { background:#fff8f2; }
+    footer { border-top:1px solid #eadbd2; width:min(1160px,calc(100% - 40px)); margin:auto; padding:25px 0; display:flex; justify-content:space-between; gap:15px; color:#79635b; font-size:12px; }
+    @media(max-width:760px) {.nav { width:min(100% - 28px,1160px); height:70px; }.nav-links { display:none; }.nav .button { padding:11px 15px; font-size:12px; }.hero { min-height:570px; }.hero-content { width:min(100% - 32px,1160px); }.hero::after { background:linear-gradient(90deg,rgba(41,23,17,.9),rgba(41,23,17,.42)); }.intro,.reservation { grid-template-columns:1fr; gap:23px; padding:75px 0; }.services { padding:70px 20px; }.section-head { display:block; }.section-head p { margin-top:17px; }.cards { grid-template-columns:1fr; }.card { min-height:185px; }footer { flex-direction:column; }}
+  </style>
+</head>
+<body>
+  <div class="preview">Propuesta visual · KAHLO Beauty Center</div>
+  <header class="nav">
+    <a href="#" class="brand">KAHLO<small>Beauty Center</small></a>
+    <nav class="nav-links"><a href="#esencia">Esencia</a><a href="#servicios">Servicios</a><a href="#reservas">Reservas</a></nav>
+    <a class="button" href="https://wa.me/50664692272?text=Hola%20KAHLO%20Beauty%20Center%2C%20quisiera%20consultar%20por%20una%20cita." target="_blank" rel="noopener">Reservar cita</a>
+  </header>
+  <main>
+    <section class="hero">
+      <img src="hero-kahlo.png" alt="Interior cálido y elegante de un centro de belleza">
+      <div class="hero-content">
+        <div class="eyebrow">Belleza · estilo · cuidado</div>
+        <h1>Tu belleza, con una mirada más personal.</h1>
+        <p>Un espacio para disfrutar tu cita, renovar tu estilo y sentirte bien en cada detalle.</p>
+        <a class="button light" href="https://wa.me/50664692272?text=Hola%20KAHLO%20Beauty%20Center%2C%20quisiera%20reservar%20una%20cita." target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+    </section>
+    <section class="intro" id="esencia">
+      <div><span class="eyebrow">KAHLO Beauty Center</span><h2>Una cita que empieza antes de llegar.</h2></div>
+      <div><p>Esta propuesta convierte el sitio en una carta de presentación clara, moderna y cercana: comunica el estilo de KAHLO y permite que las clientas consulten desde el celular en segundos.</p><p>El contenido final se puede ajustar con sus fotografías reales, servicios, horarios, precios y redes sociales.</p></div>
+    </section>
+    <section class="services" id="servicios">
+      <div class="services-wrap">
+        <div class="section-head"><div><span class="eyebrow">Servicios</span><h2>Detalles que hablan de vos.</h2></div><p>Esta sección se adapta fácilmente a la lista real de servicios que ofrece KAHLO Beauty Center.</p></div>
+        <div class="cards">
+          <article class="card"><span>01 · ESTILO</span><div><h3>Cabello &amp; estilo</h3><p>Una sección ideal para presentar cortes, peinados y los servicios que el salón desee destacar.</p></div></article>
+          <article class="card"><span>02 · COLOR</span><div><h3>Color &amp; cuidado</h3><p>Mostrá las opciones de color, tratamientos o servicios personalizados de forma clara.</p></div></article>
+          <article class="card"><span>03 · DETALLES</span><div><h3>Tu toque final</h3><p>Espacio adaptable para uñas, maquillaje, cejas u otros detalles que ofrezca el centro.</p></div></article>
+        </div>
+      </div>
+    </section>
+    <section class="reservation" id="reservas">
+      <div><span class="eyebrow">Reservar es fácil</span><h2>Tu próximo cambio está a un mensaje.</h2><p>Desde la página, cada persona puede consultar disponibilidad y coordinar su cita directamente por WhatsApp.</p></div>
+      <aside class="booking-card"><h3>Hablemos de tu cita.</h3><p>Contanos qué te gustaría hacerte y coordinamos el mejor momento para vos.</p><a class="button" href="https://wa.me/50664692272?text=Hola%20KAHLO%20Beauty%20Center%2C%20me%20gustar%C3%ADa%20consultar%20por%20disponibilidad." target="_blank" rel="noopener">Escribir por WhatsApp</a></aside>
+    </section>
+  </main>
+  <footer><span>© KAHLO Beauty Center · Vista previa de diseño</span><span>Propuesta web por Norte Web</span></footer>
+</body>
+</html>
