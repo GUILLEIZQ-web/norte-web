@@ -1,0 +1,9 @@
+DEMO PARA FADE MASTER BARBER SHOP
+
+La carpeta se puede subir directamente a GitHub Pages.
+Al abrir index.html localmente también se puede revisar la demostración.
+
+Antes de publicar la página definitiva, confirmar:
+- Número de WhatsApp Business.
+- Servicios, horarios, precios y fotografías oficiales.
+- Redes sociales y ubicación exacta.
