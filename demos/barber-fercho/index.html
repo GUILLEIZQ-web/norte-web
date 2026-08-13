@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Barber Fercho | Demo</title>
+  <meta name="description" content="Demostración de propuesta web para Barber Fercho.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --black:#111212; --charcoal:#1d2020; --sand:#d0b27b; --cream:#f5f1e9; --smoke:#beb9b0; --line:rgba(208,178,123,.28); }
+    * { box-sizing:border-box; } html { scroll-behavior:smooth; } body { margin:0; color:var(--black); font-family:"DM Sans",sans-serif; background:var(--cream); } a { color:inherit; text-decoration:none; }
+    .preview { background:var(--sand); color:var(--black); padding:10px 18px; font-size:12px; font-weight:700; text-align:center; letter-spacing:.09em; text-transform:uppercase; }
+    .nav { height:82px; width:min(1160px,calc(100% - 40px)); margin:auto; display:flex; align-items:center; justify-content:space-between; }.brand { color:var(--black); font-family:"Bebas Neue",sans-serif; font-size:32px; letter-spacing:.06em; line-height:.85; }.brand small { color:#8a7250; display:block; font-family:"DM Sans",sans-serif; font-size:9px; font-weight:700; letter-spacing:.29em; margin-top:8px; text-transform:uppercase; }.nav-links { display:flex; gap:28px; font-size:13px; color:#625e57; }.button { display:inline-flex; justify-content:center; align-items:center; background:var(--black); color:white; font-size:13px; font-weight:700; padding:14px 21px; border-radius:3px; transition:.2s ease; }.button:hover { transform:translateY(-2px); background:#3a3d3c; }
+    .hero { position:relative; min-height:625px; display:grid; align-items:center; overflow:hidden; }.hero img { width:100%; height:100%; position:absolute; inset:0; object-fit:cover; }.hero::after { content:""; position:absolute; inset:0; background:linear-gradient(90deg,rgba(10,11,11,.91),rgba(10,11,11,.78) 38%,rgba(10,11,11,.24) 75%,rgba(10,11,11,.04)); }.hero-content { color:#fffdf7; width:min(1160px,calc(100% - 40px)); margin:auto; position:relative; z-index:1; padding:70px 0; }.eyebrow { color:var(--sand); letter-spacing:.18em; font-size:11px; font-weight:700; text-transform:uppercase; display:flex; align-items:center; gap:10px; }.eyebrow::before { content:""; background:var(--sand); height:1px; width:31px; }.hero h1,.title h2,.process h2,.booking h2 { font-family:"Bebas Neue",sans-serif; font-weight:400; letter-spacing:.018em; line-height:.89; margin:0; }.hero h1 { max-width:690px; font-size:clamp(65px,10vw,122px); margin-top:22px; }.hero p { color:#e5e0d7; font-size:18px; max-width:470px; line-height:1.65; margin:24px 0 32px; }.button.light { background:var(--sand); color:#171716; }.button.light:hover { background:#f2deaf; }
+    .statement { width:min(1060px,calc(100% - 40px)); margin:auto; padding:107px 0 86px; display:grid; grid-template-columns:.86fr 1.14fr; gap:85px; }.statement .eyebrow { color:#8b7250; }.statement .eyebrow::before { background:#8b7250; }.statement h2 { font-family:"Bebas Neue",sans-serif; font-size:clamp(47px,6vw,74px); line-height:.92; letter-spacing:.01em; margin-top:15px; }.statement p { color:#65625c; line-height:1.78; font-size:17px; margin:16px 0 0; }
+    .services { background:var(--charcoal); color:#fcf8ef; padding:85px 20px; }.service-wrap { width:min(1120px,100%); margin:auto; }.title { display:flex; justify-content:space-between; align-items:end; gap:30px; margin-bottom:34px; }.title h2 { font-size:clamp(48px,6vw,74px); margin-top:15px; }.title p { max-width:330px; margin:0; color:#c5c0b6; line-height:1.65; font-size:14px; }.cards { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); }.card { background:#242727; min-height:235px; padding:29px; display:flex; flex-direction:column; justify-content:space-between; }.card span { color:var(--sand); font-size:12px; letter-spacing:.15em; font-weight:700; }.card h3 { font-family:"Bebas Neue",sans-serif; font-size:39px; line-height:.95; font-weight:400; letter-spacing:.02em; margin:0; }.card p { color:#c4c0b8; font-size:14px; line-height:1.6; margin:9px 0 0; }
+    .process { width:min(1060px,calc(100% - 40px)); padding:95px 0; margin:auto; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }.process .eyebrow { color:#8b7250; }.process .eyebrow::before { background:#8b7250; }.process h2 { color:var(--black); font-size:clamp(48px,6vw,75px); margin-top:15px; }.steps { border-top:1px solid #d9d0c3; }.step { min-height:70px; display:grid; grid-template-columns:46px 1fr; align-items:center; border-bottom:1px solid #d9d0c3; color:#55534e; font-size:15px; }.step b { color:#9a7a4d; font-size:13px; }.booking { background:#111212; text-align:center; color:#fffdf7; padding:94px 20px; }.booking .eyebrow { justify-content:center; }.booking .eyebrow::after { content:""; background:var(--sand); height:1px; width:31px; }.booking h2 { font-size:clamp(53px,6vw,78px); max-width:690px; margin:17px auto; }.booking p { color:#ccc7bd; max-width:500px; line-height:1.7; margin:0 auto 29px; }footer { display:flex; width:min(1160px,calc(100% - 40px)); margin:auto; justify-content:space-between; gap:15px; color:#68645d; font-size:12px; padding:25px 0; }
+    @media(max-width:760px) {.nav { height:70px; width:min(100% - 28px,1160px); }.nav-links { display:none; }.nav .button { padding:11px 14px; font-size:12px; }.hero { min-height:570px; }.hero-content { width:min(100% - 32px,1160px); }.hero::after { background:linear-gradient(90deg,rgba(10,11,11,.9),rgba(10,11,11,.46)); }.statement,.process { grid-template-columns:1fr; gap:24px; padding:75px 0; }.services { padding:70px 20px; }.title { display:block; }.title p { margin-top:17px; }.cards { grid-template-columns:1fr; }.card { min-height:180px; }footer { flex-direction:column; }}
+  </style>
+</head>
+<body>
+  <div class="preview">Propuesta visual · Barber Fercho</div>
+  <header class="nav">
+    <a href="#" class="brand">Barber Fercho<small>Barbería &amp; estilo</small></a>
+    <nav class="nav-links"><a href="#estilo">Estilo</a><a href="#servicios">Servicios</a><a href="#reserva">Reservas</a></nav>
+    <a class="button" href="https://wa.me/50663980215?text=Hola%20Barber%20Fercho%2C%20quisiera%20consultar%20por%20una%20cita." target="_blank" rel="noopener">Agendar cita</a>
+  </header>
+  <main>
+    <section class="hero">
+      <img src="hero-barber-fercho.png" alt="Interior elegante de barbería con silla de barbero">
+      <div class="hero-content">
+        <div class="eyebrow">Barbería &amp; estilo</div>
+        <h1>Tu corte.<br>Tu sello.</h1>
+        <p>Un espacio para salir con un estilo que se siente propio. Reservá tu cita de forma rápida y directa por WhatsApp.</p>
+        <a class="button light" href="https://wa.me/50663980215?text=Hola%20Barber%20Fercho%2C%20quisiera%20reservar%20una%20cita." target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+    </section>
+    <section class="statement" id="estilo">
+      <div><span class="eyebrow">Barber Fercho</span><h2>El detalle hace la diferencia.</h2></div>
+      <div><p>Esta propuesta presenta Barber Fercho con una imagen sólida y profesional, enseña los servicios principales y permite que cada cliente consulte disponibilidad desde el celular.</p><p>Los textos, fotografías, precios, horarios y redes sociales se pueden adaptar completamente a la información real de la barbería.</p></div>
+    </section>
+    <section class="services" id="servicios">
+      <div class="service-wrap">
+        <div class="title"><div><span class="eyebrow">Servicios</span><h2>Elegí tu estilo.</h2></div><p>Una sección clara para que cada cliente conozca las opciones y escriba para coordinar su cita.</p></div>
+        <div class="cards">
+          <article class="card"><span>01 · CORTE</span><div><h3>Corte de cabello</h3><p>Espacio para presentar los cortes y estilos que Barber Fercho ofrece.</p></div></article>
+          <article class="card"><span>02 · PERFILADO</span><div><h3>Barba &amp; detalle</h3><p>Una sección adaptable para los servicios de barba y perfilado disponibles.</p></div></article>
+          <article class="card"><span>03 · EXPERIENCIA</span><div><h3>Tu cita</h3><p>Consultá el servicio que buscás y coordiná directamente por WhatsApp.</p></div></article>
+        </div>
+      </div>
+    </section>
+    <section class="process" id="reserva">
+      <div><span class="eyebrow">Una reserva simple</span><h2>Escribí. Coordiná. Llegá listo.</h2></div>
+      <div class="steps"><div class="step"><b>01</b><span>Elegí el servicio que querés consultar.</span></div><div class="step"><b>02</b><span>Escribí por WhatsApp para revisar disponibilidad.</span></div><div class="step"><b>03</b><span>Coordiná tu cita y preparate para tu próximo corte.</span></div></div>
+    </section>
+    <section class="booking">
+      <span class="eyebrow">Reservas por WhatsApp</span>
+      <h2>Tu próxima cita empieza aquí.</h2>
+      <p>Escribinos para consultar disponibilidad y coordinar el servicio que necesitás.</p>
+      <a class="button light" href="https://wa.me/50663980215?text=Hola%20Barber%20Fercho%2C%20me%20gustar%C3%ADa%20consultar%20por%20disponibilidad." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    </section>
+  </main>
+  <footer><span>© Barber Fercho · Vista previa de diseño</span><span>Propuesta web por Norte Web</span></footer>
+</body>
+</html>
