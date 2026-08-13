@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Ka Pono Restorative | Demo</title>
+  <meta name="description" content="Demostración de propuesta web para Ka Pono Restorative.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#1e302b; --moss:#50685b; --cream:#f5f0e7; --sand:#d5b98b; --line:rgba(30,48,43,.16); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--cream); color:var(--ink); font-family:"DM Sans",sans-serif; }
+    a { color:inherit; text-decoration:none; }
+    .preview { background:#1e302b; color:#f8f4ec; padding:10px 18px; font-size:12px; letter-spacing:.08em; text-align:center; text-transform:uppercase; }
+    .nav { width:min(1160px,calc(100% - 40px)); height:80px; margin:auto; display:flex; align-items:center; justify-content:space-between; }
+    .brand { display:flex; flex-direction:column; line-height:1; letter-spacing:.14em; text-transform:uppercase; font-size:17px; font-weight:700; }
+    .brand small { color:var(--moss); font-size:9px; font-weight:600; letter-spacing:.25em; margin-top:8px; }
+    .nav-links { display:flex; gap:26px; font-size:13px; color:#43554d; }
+    .nav-cta,.button { display:inline-flex; align-items:center; justify-content:center; border-radius:99px; background:var(--ink); color:white; font-weight:700; font-size:13px; padding:14px 21px; transition:.2s ease; }
+    .nav-cta:hover,.button:hover { transform:translateY(-2px); background:#304b42; }
+    .hero { min-height:610px; position:relative; overflow:hidden; display:grid; align-items:center; }
+    .hero::before { content:""; position:absolute; inset:0; background:linear-gradient(90deg,rgba(13,22,18,.88) 0%,rgba(21,34,29,.73) 37%,rgba(21,34,29,.18) 74%,rgba(21,34,29,.04)); z-index:1; }
+    .hero img { width:100%; height:100%; position:absolute; inset:0; object-fit:cover; object-position:center; }
+    .hero-content { width:min(1160px,calc(100% - 40px)); margin:auto; position:relative; z-index:2; color:#fffaf1; padding:64px 0; }
+    .eyebrow { display:flex; align-items:center; gap:10px; text-transform:uppercase; letter-spacing:.17em; font-size:11px; font-weight:700; color:#d7c49e; }
+    .eyebrow::before { content:""; display:block; height:1px; width:38px; background:#d7c49e; }
+    h1,h2 { font-family:"Playfair Display",serif; margin:0; font-weight:600; }
+    h1 { max-width:650px; font-size:clamp(46px,7vw,80px); letter-spacing:-.045em; line-height:.98; margin-top:23px; }
+    .hero p { font-size:18px; line-height:1.6; max-width:510px; margin:25px 0 31px; color:#f2eadc; }
+    .button.light { background:#f9f4eb; color:var(--ink); }
+    .button.light:hover { background:#d5b98b; }
+    .intro { width:min(1050px,calc(100% - 40px)); margin:0 auto; padding:112px 0 78px; display:grid; grid-template-columns:.8fr 1.2fr; gap:80px; }
+    .section-label { color:var(--moss); text-transform:uppercase; letter-spacing:.16em; font-size:11px; font-weight:700; }
+    h2 { font-size:clamp(34px,5vw,54px); letter-spacing:-.04em; line-height:1.08; }
+    .intro h2 { margin-top:17px; }
+    .intro p { color:#526159; line-height:1.75; font-size:17px; margin:19px 0 0; }
+    .services { padding:0 20px 100px; }
+    .service-wrap { width:min(1160px,100%); margin:auto; background:#e6dac6; padding:52px; }
+    .service-head { display:flex; justify-content:space-between; align-items:end; gap:30px; margin-bottom:33px; }
+    .service-head h2 { max-width:520px; font-size:42px; }
+    .service-head p { max-width:300px; line-height:1.6; color:#526159; font-size:14px; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .card { min-height:220px; padding:27px; background:#f6f1e8; border:1px solid rgba(30,48,43,.12); display:flex; flex-direction:column; justify-content:space-between; }
+    .card-number { color:#9a7c52; font-size:12px; letter-spacing:.12em; font-weight:700; }
+    .card h3 { margin:0 0 10px; font-family:"Playfair Display",serif; font-size:27px; font-weight:600; }
+    .card p { color:#56645c; line-height:1.6; font-size:14px; margin:0; }
+    .ritual { width:min(1060px,calc(100% - 40px)); margin:0 auto 100px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:58px 0; display:grid; grid-template-columns:1fr 1fr; gap:45px; }
+    .ritual p { margin:13px 0 0; color:#526159; line-height:1.7; }
+    .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; align-self:end; }
+    .step { border-left:1px solid var(--sand); padding-left:14px; font-size:13px; line-height:1.45; color:#526159; }
+    .step b { display:block; color:var(--ink); font-size:14px; margin-bottom:5px; }
+    .booking { background:var(--ink); color:#f9f4eb; text-align:center; padding:92px 20px; }
+    .booking .section-label { color:#d5b98b; }
+    .booking h2 { max-width:700px; margin:17px auto 19px; }
+    .booking p { max-width:520px; margin:0 auto 29px; color:#d8dfd8; line-height:1.7; }
+    footer { display:flex; justify-content:space-between; gap:15px; width:min(1160px,calc(100% - 40px)); margin:auto; padding:25px 0; color:#56645c; font-size:12px; }
+    @media (max-width:760px) {
+      .nav { height:70px; width:min(100% - 28px,1160px); } .nav-links { display:none; } .nav-cta { padding:11px 15px; font-size:12px; }
+      .hero { min-height:580px; } .hero-content { width:min(100% - 32px,1160px); } .hero::before { background:linear-gradient(90deg,rgba(13,22,18,.87),rgba(13,22,18,.35)); }
+      .intro { grid-template-columns:1fr; gap:18px; padding:76px 0 60px; } .service-wrap { padding:32px 20px; } .service-head { display:block; } .service-head h2 { font-size:35px; } .cards { grid-template-columns:1fr; } .card { min-height:170px; }
+      .ritual { grid-template-columns:1fr; margin-bottom:70px; padding:42px 0; } .steps { grid-template-columns:1fr; } footer { flex-direction:column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="preview">Propuesta visual · Ka Pono Restorative</div>
+  <header class="nav">
+    <a class="brand" href="#"><span>Ka Pono</span><small>Restorative</small></a>
+    <nav class="nav-links"><a href="#enfoque">Enfoque</a><a href="#practicas">Prácticas</a><a href="#contacto">Contacto</a></nav>
+    <a class="nav-cta" href="https://wa.me/50672317650?text=Hola%20Ka%20Pono%2C%20quisiera%20conocer%20m%C3%A1s%20sobre%20sus%20sesiones." target="_blank" rel="noopener">Consultar</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="hero-ka-pono.png" alt="Espacio de bienestar sereno con camilla de madera">
+      <div class="hero-content">
+        <div class="eyebrow">Bienestar restaurativo</div>
+        <h1>El arte de restaurar tu cuerpo.</h1>
+        <p>Un espacio para volver al equilibrio con escucha, presencia y una atención dedicada a tu bienestar.</p>
+        <a class="button light" href="https://wa.me/50672317650?text=Hola%20Ka%20Pono%2C%20quisiera%20agendar%20una%20consulta." target="_blank" rel="noopener">Agendar una consulta</a>
+      </div>
+    </section>
+
+    <section class="intro" id="enfoque">
+      <div><span class="section-label">Ka Pono Restorative</span></div>
+      <div>
+        <h2>Un momento para habitar tu cuerpo con calma.</h2>
+        <p>Esta propuesta presenta una experiencia clara desde el primer vistazo: explica el enfoque, transmite serenidad y convierte cada visita en una conversación directa por WhatsApp.</p>
+        <p>El contenido final puede ajustarse a la información, fotografías y forma de trabajo de Ka Pono.</p>
+      </div>
+    </section>
+
+    <section class="services" id="practicas">
+      <div class="service-wrap">
+        <div class="service-head">
+          <div><span class="section-label">Prácticas</span><h2>Elegí el espacio que necesitás hoy.</h2></div>
+          <p>Una presentación breve y ordenada ayuda a que cada persona entienda por dónde empezar.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><span class="card-number">01</span><div><h3>Lomi Lomi</h3><p>Una práctica corporal que invita a soltar el ritmo y recuperar una sensación de bienestar.</p></div></article>
+          <article class="card"><span class="card-number">02</span><div><h3>Anma</h3><p>Un momento de atención consciente pensado para acompañar el descanso y la conexión corporal.</p></div></article>
+          <article class="card"><span class="card-number">03</span><div><h3>Seifukujutsu</h3><p>Un enfoque restaurativo que puede explicarse con detalle antes de coordinar la sesión.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ritual">
+      <div><span class="section-label">Una experiencia simple</span><h2>Conocé, consultá y coordiná.</h2><p>El sitio guía a cada visitante sin complicaciones y permite resolver sus dudas desde el canal más cercano: WhatsApp.</p></div>
+      <div class="steps"><div class="step"><b>01 · Descubrí</b>Conocé el enfoque y las prácticas.</div><div class="step"><b>02 · Consultá</b>Contá lo que estás buscando.</div><div class="step"><b>03 · Coordiná</b>Elegí el momento para tu sesión.</div></div>
+    </section>
+
+    <section class="booking" id="contacto">
+      <span class="section-label">Tu tiempo importa</span>
+      <h2>Empezá con una conversación.</h2>
+      <p>Escribinos por WhatsApp para conocer las sesiones, resolver dudas y coordinar tu visita.</p>
+      <a class="button light" href="https://wa.me/50672317650?text=Hola%20Ka%20Pono%2C%20quisiera%20conversar%20sobre%20una%20sesi%C3%B3n." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    </section>
+  </main>
+  <footer><span>© Ka Pono Restorative · Vista previa de diseño</span><span>Propuesta web por Norte Web</span></footer>
+</body>
+</html>

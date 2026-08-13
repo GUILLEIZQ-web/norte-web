@@ -1,0 +1,9 @@
+KA PONO RESTORATIVE - DEMO PARA GITHUB PAGES
+
+1. Subí esta carpeta completa dentro de la carpeta "demos" de tu repositorio.
+2. Conservá exactamente el nombre: ka-pono-restorative
+3. La dirección quedará:
+   https://norteweb.es-un.dev/demos/ka-pono-restorative/
+
+Incluye una imagen original de ambiente y botones de WhatsApp configurados para 7231 7650.
+Antes de publicar el sitio final: confirmar textos de cada práctica, fotografías reales, disponibilidad y cualquier detalle de contacto.

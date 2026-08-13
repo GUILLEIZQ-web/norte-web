@@ -1,0 +1,9 @@
+SALA SHALOM - DEMO PARA GITHUB PAGES
+
+1. Subí esta carpeta completa dentro de la carpeta "demos" de tu repositorio.
+2. Conservá exactamente el nombre: sala-shalom
+3. La dirección quedará:
+   https://norteweb.es-un.dev/demos/sala-shalom/
+
+Incluye una imagen original de ambiente y botones de WhatsApp configurados para 7177 1147.
+Antes de publicar el sitio final: confirmar la lista definitiva de servicios, fotografías, horarios y cualquier dato de contacto.
