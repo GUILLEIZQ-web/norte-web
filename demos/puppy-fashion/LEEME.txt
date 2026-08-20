@@ -6,7 +6,14 @@ Ruta sugerida dentro de tu repositorio:
 demos/puppy-fashion/
 
 Enlace final después de subirla:
-https://norteweb.es-un.dev/demos/puppy-fashion/
+https://guilleizq-web.github.io/norte-web/demos/puppy-fashion/
 
-Conserva la carpeta completa: index.html, assets y .nojekyll.
-Todos los botones de WhatsApp están configurados para el +506 8516 2423.
+Conserva la carpeta completa: index.html, LEEME.txt y la carpeta assets.
+El número personal fue eliminado de toda la demo. Mientras Puppy Fashion confirma
+su WhatsApp Business, los botones llevan de forma segura a Instagram.
+
+Cuando confirmen el número, abre assets/site-config.js y completa únicamente la
+propiedad whatsappBusiness. Todos los botones se actualizarán desde ese único lugar.
+
+Antes de publicar la página como sitio oficial, confirma servicios, indicaciones,
+precios, dirección, horarios, fotografías y disponibilidad con Puppy Fashion.

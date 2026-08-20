@@ -4,15 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0c1224">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="description" content="Demo e-commerce de accesorios tecnológicos premium creada por Norte Web.">
   <meta name="robots" content="index,follow">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="LUXORA · Accesorios tecnológicos premium">
-  <meta property="og:description" content="Accesorios tecnológicos premium para tu espacio de trabajo.">
-  <meta property="og:image" content="products/halo-charge-stand.png">
-  <meta name="twitter:card" content="summary_large_image">
   <title>LUXORA · Demo e-commerce de Norte Web</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,8 +23,26 @@
     "potentialAction":{"@type":"SearchAction","target":"?q={search_term_string}","query-input":"required name=search_term_string"}
   }
   </script>
+  <link rel="canonical" href="https://guilleizq-web.github.io/norte-web/demos/luxora/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CR">
+  <meta property="og:site_name" content="Norte Web">
+  <meta property="og:title" content="LUXORA | Demo de Norte Web">
+  <meta property="og:description" content="Demostración ficticia de una tienda de accesorios tecnológicos creada por Norte Web.">
+  <meta property="og:url" content="https://guilleizq-web.github.io/norte-web/demos/luxora/">
+  <meta property="og:image" content="https://guilleizq-web.github.io/norte-web/demos/luxora/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LUXORA | Demo de Norte Web">
+  <meta name="twitter:description" content="Demostración ficticia de una tienda de accesorios tecnológicos creada por Norte Web.">
+  <meta name="twitter:image" content="https://guilleizq-web.github.io/norte-web/demos/luxora/og.jpg">
+  <link rel="stylesheet" href="../demo-standards.css">
 </head>
 <body class="theme-light">
+<a class="nw-skip-link" href="#nw-demo-content">Saltar al contenido</a>
+<div class="nw-demo-banner" role="note"><span><strong>Vista previa de Norte Web</strong> · Demo de portafolio · Marca ficticia</span><a href="../../">Volver al portafolio</a></div>
+<div id="nw-demo-content" class="nw-content-anchor" tabindex="-1"></div>
   <div class="portfolio-demo-bar"><a href="../../">← Volver a Norte Web</a><span>DEMO INTERACTIVA · MARCA FICTICIA</span><a href="../../#contacto">Quiero una tienda así ↗</a></div>
   <a class="skip-link" href="#main">Saltar al contenido</a>
   <div class="reading-progress" aria-hidden="true"><span id="readingProgress"></span></div>
@@ -92,7 +104,7 @@
           <a class="btn btn-primary" href="#productos">Descubrir colección</a>
           <button class="btn btn-secondary" id="heroDemo" type="button">Ver experiencia 360°</button>
         </div>
-        <div class="hero__badges" aria-label="Indicadores de confianza">
+        <div class="hero__badges" role="group" aria-label="Indicadores de confianza">
           <div><strong>4.9/5</strong><span>valoración media</span></div>
           <div><strong>10K+</strong><span>clientes satisfechos</span></div>
           <div><strong>24 h</strong><span>soporte premium</span></div>
@@ -188,7 +200,7 @@
     </section>
 
     <section class="section featured-card reveal">
-      <div class="featured-card__media"><img src="products/halo-charge-stand.webp" alt="Base de carga Halo Charge Stand" loading="lazy" decoding="async" fetchpriority="low"></div>
+      <div class="featured-card__media"><img src="products/halo-charge-stand.webp" width="1122" height="1402" alt="Base de carga Halo Charge Stand" loading="lazy" decoding="async" fetchpriority="low"></div>
       <div class="featured-card__content">
         <span class="eyebrow">Pieza insignia</span>
         <h2>Halo Charge Stand</h2>
@@ -198,21 +210,21 @@
       </div>
     </section>
 
-    <section class="section benefits">
+    <div class="section benefits">
       <div class="benefits-grid reveal">
         <article class="benefit-card"><span>↗</span><h3>Envío estimado</h3><p>Calcula coste, impuestos y fecha antes de finalizar tu pedido.</p></article>
         <article class="benefit-card"><span>◇</span><h3>Calidad garantizada</h3><p>Materiales cuidados, 30 días de devolución y cobertura premium.</p></article>
         <article class="benefit-card"><span>◌</span><h3>Compra a tu manera</h3><p>Lista de deseos, comparador, moneda e idioma sin perder tu selección.</p></article>
         <article class="benefit-card"><span>◈</span><h3>Atención humana</h3><p>Centro de ayuda, chat y seguimiento visible desde tu perfil.</p></article>
       </div>
-    </section>
+    </div>
 
     <section class="section journal" id="journal">
       <div class="section__header reveal"><span class="eyebrow">Ideas LUXORA</span><div><h2>Ideas para un espacio que se siente tuyo.</h2><p>El blog está preparado para publicaciones y guías de producto.</p></div></div>
       <div class="journal-grid reveal">
-        <article><img src="products/flux-desk-pad.webp" alt="Escritorio con Desk Pad Flux" loading="lazy" decoding="async" fetchpriority="low"><span>Guías</span><h3>Cómo crear un escritorio más tranquilo</h3><button class="text-button" data-open-info="journal" type="button">Leer artículo</button></article>
-        <article><img src="products/aero-laptop-stand.webp" alt="Soporte de portátil Aero" loading="lazy" decoding="async" fetchpriority="low"><span>Diseño</span><h3>La utilidad de los objetos bien hechos</h3><button class="text-button" data-open-info="journal" type="button">Leer artículo</button></article>
-        <article><img src="products/lumen-desk-lamp.webp" alt="Lámpara de escritorio Lumen" loading="lazy" decoding="async" fetchpriority="low"><span>Novedades</span><h3>La luz que acompaña tus horas de enfoque</h3><button class="text-button" data-open-info="journal" type="button">Leer artículo</button></article>
+        <article><img src="products/flux-desk-pad.webp" width="1122" height="1402" alt="Escritorio con Desk Pad Flux" loading="lazy" decoding="async" fetchpriority="low"><span>Guías</span><h3>Cómo crear un escritorio más tranquilo</h3><button class="text-button" data-open-info="journal" type="button">Leer artículo</button></article>
+        <article><img src="products/aero-laptop-stand.webp" width="1122" height="1402" alt="Soporte de portátil Aero" loading="lazy" decoding="async" fetchpriority="low"><span>Diseño</span><h3>La utilidad de los objetos bien hechos</h3><button class="text-button" data-open-info="journal" type="button">Leer artículo</button></article>
+        <article><img src="products/lumen-desk-lamp.webp" width="1122" height="1402" alt="Lámpara de escritorio Lumen" loading="lazy" decoding="async" fetchpriority="low"><span>Novedades</span><h3>La luz que acompaña tus horas de enfoque</h3><button class="text-button" data-open-info="journal" type="button">Leer artículo</button></article>
       </div>
     </section>
 
@@ -239,23 +251,23 @@
         <button data-open-info="terms" type="button">Términos</button>
       </nav>
     </div>
-    <div class="footer__bottom"><p>© 2026 LUXORA. Todos los derechos reservados. <span class="norte-credit">Demo creada por <a href="../../">Norte Web</a> · <a href="https://www.instagram.com/nortewebcr/" target="_blank" rel="noreferrer">Instagram</a> · <a href="https://www.facebook.com/nortewebcr" target="_blank" rel="noreferrer">Facebook</a></span></p><button class="text-button" id="cookieSettings" type="button">Preferencias de cookies</button></div>
+    <div class="footer__bottom"><p>© 2026 LUXORA. Todos los derechos reservados. <span class="norte-credit">Demo creada por <a href="../../">Norte Web</a> · <a href="https://www.instagram.com/nortewebcr/" target="_blank" rel="noopener noreferrer">Instagram</a> · <a href="https://www.facebook.com/nortewebcr" target="_blank" rel="noopener noreferrer">Facebook</a></span></p><button class="text-button" id="cookieSettings" type="button">Preferencias de cookies</button></div>
   </footer>
 
   <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras" aria-hidden="true">
     <div class="drawer-head"><div><span class="eyebrow">Tu selección</span><h2>Carrito</h2></div><button class="icon-btn" data-close-cart type="button" aria-label="Cerrar carrito">×</button></div>
     <div class="cart-drawer__body" id="cartItems"></div>
-    <section class="cart-progress" id="shippingProgress" aria-live="polite"></section>
+    <div class="cart-progress" id="shippingProgress" aria-live="polite"></div>
     <div class="coupon-box"><label for="couponInput">Cupón o gift card</label><div><input id="couponInput" autocomplete="off" placeholder="LUXORA10"><button class="btn btn-secondary" id="couponApply" type="button">Aplicar</button></div><p id="couponMessage"></p></div>
     <div class="cart-summary" id="cartSummary"></div>
     <button class="btn btn-primary btn-full" id="checkoutButton" type="button">Finalizar compra</button>
   </aside>
 
-  <div class="modal" id="productModal" hidden role="dialog" aria-modal="true" aria-labelledby="productTitle"><div class="modal__panel modal__panel--product"><button class="icon-btn modal-close" data-close-modal="productModal" type="button" aria-label="Cerrar producto">×</button><div id="productModalContent"></div></div></div>
-  <div class="modal" id="accountModal" hidden role="dialog" aria-modal="true" aria-labelledby="accountTitle"><div class="modal__panel"><button class="icon-btn modal-close" data-close-modal="accountModal" type="button" aria-label="Cerrar cuenta">×</button><div id="accountModalContent"></div></div></div>
-  <div class="modal" id="compareModal" hidden role="dialog" aria-modal="true" aria-labelledby="compareTitle"><div class="modal__panel modal__panel--wide"><button class="icon-btn modal-close" data-close-modal="compareModal" type="button" aria-label="Cerrar comparador">×</button><div id="compareModalContent"></div></div></div>
-  <div class="modal" id="checkoutModal" hidden role="dialog" aria-modal="true" aria-labelledby="checkoutTitle"><div class="modal__panel"><button class="icon-btn modal-close" data-close-modal="checkoutModal" type="button" aria-label="Cerrar checkout">×</button><div id="checkoutModalContent"></div></div></div>
-  <div class="modal" id="infoModal" hidden role="dialog" aria-modal="true" aria-labelledby="infoTitle"><div class="modal__panel"><button class="icon-btn modal-close" data-close-modal="infoModal" type="button" aria-label="Cerrar">×</button><div id="infoModalContent"></div></div></div>
+  <div class="modal" id="productModal" hidden role="dialog" aria-modal="true" aria-label="Detalles del producto"><div class="modal__panel modal__panel--product"><button class="icon-btn modal-close" data-close-modal="productModal" type="button" aria-label="Cerrar producto">×</button><div id="productModalContent"></div></div></div>
+  <div class="modal" id="accountModal" hidden role="dialog" aria-modal="true" aria-label="Cuenta de cliente"><div class="modal__panel"><button class="icon-btn modal-close" data-close-modal="accountModal" type="button" aria-label="Cerrar cuenta">×</button><div id="accountModalContent"></div></div></div>
+  <div class="modal" id="compareModal" hidden role="dialog" aria-modal="true" aria-label="Comparador de productos"><div class="modal__panel modal__panel--wide"><button class="icon-btn modal-close" data-close-modal="compareModal" type="button" aria-label="Cerrar comparador">×</button><div id="compareModalContent"></div></div></div>
+  <div class="modal" id="checkoutModal" hidden role="dialog" aria-modal="true" aria-label="Finalizar compra"><div class="modal__panel"><button class="icon-btn modal-close" data-close-modal="checkoutModal" type="button" aria-label="Cerrar checkout">×</button><div id="checkoutModalContent"></div></div></div>
+  <div class="modal" id="infoModal" hidden role="dialog" aria-modal="true" aria-label="Información"><div class="modal__panel"><button class="icon-btn modal-close" data-close-modal="infoModal" type="button" aria-label="Cerrar">×</button><div id="infoModalContent"></div></div></div>
   <div class="overlay" id="overlay"></div>
 
   <aside class="support-chat" id="supportChat" aria-label="Asistente de LUXORA">
