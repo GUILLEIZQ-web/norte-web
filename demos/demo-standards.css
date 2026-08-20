@@ -1,0 +1,104 @@
+/* Elementos comunes de accesibilidad y transparencia para las demostraciones. */
+.nw-skip-link {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 10000;
+  padding: 12px 16px;
+  border-radius: 10px;
+  color: #ffffff;
+  background: #10151d;
+  font: 700 14px/1.2 system-ui, sans-serif;
+  text-decoration: none;
+  transform: translateY(-150%);
+  transition: transform 160ms ease;
+}
+
+.nw-skip-link:focus {
+  transform: translateY(0);
+  outline: 3px solid #b8f34a;
+  outline-offset: 3px;
+}
+
+.nw-demo-banner {
+  position: relative;
+  z-index: 999;
+  min-height: 42px;
+  padding: 8px clamp(14px, 4vw, 32px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  color: #f7fafc;
+  background: #10151d;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  font: 650 12px/1.4 system-ui, sans-serif;
+  letter-spacing: 0.035em;
+  text-align: center;
+}
+
+.nw-demo-banner strong {
+  color: #c8ff63;
+  font-weight: 800;
+}
+
+.nw-demo-banner a {
+  min-height: 30px;
+  padding: 5px 11px;
+  display: inline-flex;
+  align-items: center;
+  color: #10151d;
+  background: #c8ff63;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.nw-demo-banner a:hover {
+  background: #ffffff;
+}
+
+.nw-demo-banner a:focus-visible,
+body a:focus-visible,
+body button:focus-visible {
+  outline: 3px solid #166534;
+  outline-offset: 3px;
+}
+
+.nw-content-anchor {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+}
+
+/* Oculta solamente la antigua cinta superior cuando la nueva está presente. */
+body > .nw-demo-banner ~ .preview,
+body > .nw-demo-banner ~ .notice,
+body > .nw-demo-banner ~ .demo-ribbon,
+body > .nw-demo-banner ~ .portfolio-ribbon {
+  display: none !important;
+}
+
+@media (max-width: 520px) {
+  .nw-demo-banner {
+    min-height: 52px;
+    font-size: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
