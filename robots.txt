@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://guilleizq-web.github.io/norte-web/sitemap.xml
