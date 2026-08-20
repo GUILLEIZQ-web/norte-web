@@ -1,13 +1,19 @@
 DEMO: DAGSS WELLNESS
 
 Enlace al subir esta carpeta dentro de /demos en el repositorio del portafolio:
-https://norteweb.es-un.dev/demos/dagss-wellness/
+https://guilleizq-web.github.io/norte-web/demos/dagss-wellness/
 
 Contenido:
 - index.html
 - assets/site.css
-- assets/images/dagss-hero.png
-- assets/images/dagss-profile.png
+- assets/images/dagss-hero-768.webp
+- assets/images/dagss-hero-1280.webp
+- assets/images/dagss-profile-480.webp
+- assets/images/dagss-profile-640.webp
+- assets/images/dagss-og.jpg
 
 La demo usa rutas relativas y no necesita instalar nada. Conserva toda la carpeta
 dagss-wellness dentro de la carpeta demos de tu portafolio.
+
+Antes de publicarla como sitio oficial, DAGSS debe confirmar el teléfono, horario,
+zona de atención, servicios, credenciales profesionales y cualquier contraindicación.

@@ -1,0 +1,96 @@
+/* Mejoras de accesibilidad, aviso de demo y precisión del contenido. */
+.skip-link {
+  position: fixed;
+  z-index: 1000;
+  top: 10px;
+  left: 10px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: #f3ecdf;
+  color: #070a0f;
+  font-weight: 800;
+  box-shadow: 0 8px 30px #0007;
+  transform: translateY(-160%);
+}
+
+.skip-link:focus { transform: translateY(0); }
+
+.demo-notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  padding: 10px clamp(18px, 4vw, 68px);
+  background: #171e29;
+  color: #e6dac8;
+  border-bottom: 1px solid #d8b27545;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.demo-notice a {
+  flex: none;
+  color: #f0c889;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+:focus-visible {
+  outline: 3px solid #e4bd7e;
+  outline-offset: 4px;
+}
+
+section[id] { scroll-margin-top: 104px; }
+
+.header-cta,
+.button,
+.text-link,
+.experience-notes a,
+.location-actions a,
+footer a { min-height: 44px; }
+
+.text-link,
+.experience-notes a,
+.location-actions a,
+footer a { display: inline-flex; align-items: center; }
+
+.confirmation-note {
+  margin: -4px 0 22px;
+  color: #786b5b;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.exosomes-intro > p:not(.eyebrow),
+.benefits-list p { color: #ded3c1; }
+
+@media (max-width: 760px) {
+  .demo-notice {
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 9px 16px;
+    font-size: 10px;
+  }
+
+  .demo-notice span { max-width: 72%; }
+  .demo-notice a { text-align: right; }
+  .hero h1,
+  .section-heading h2,
+  .pause-copy h2,
+  .exosomes-intro h2,
+  .location-card h2 { overflow-wrap: anywhere; }
+}
+
+@media (max-width: 430px) {
+  .demo-notice { display: grid; }
+  .demo-notice span { max-width: none; }
+  .demo-notice a { text-align: left; }
+  .brand-copy small { display: none; }
+  .hero-signature { gap: 10px; }
+  .hero-signature i { width: 18px; }
+  .featured-topline { align-items: flex-start; gap: 8px; }
+  .featured-topline span { white-space: nowrap; }
+  .floating-copy small { display: none; }
+}

@@ -79,6 +79,7 @@
   const previewContent = document.querySelector('#preview-content');
   const previewTag = document.querySelector('#preview-tag');
   const planCards = document.querySelectorAll('.plan-card');
+  const planButtons = document.querySelectorAll('.plan-select[data-plan]');
 
   const renderPlan = (plan) => {
     const data = planData[plan];
@@ -90,11 +91,13 @@
     planCards.forEach((card) => {
       const selected = card.dataset.plan === plan;
       card.classList.toggle('is-active', selected);
-      card.setAttribute('aria-selected', String(selected));
+    });
+    planButtons.forEach((button) => {
+      button.setAttribute('aria-pressed', String(button.dataset.plan === plan));
     });
   };
   renderPlan('plata');
-  planCards.forEach((card) => card.addEventListener('click', () => renderPlan(card.dataset.plan)));
+  planButtons.forEach((button) => button.addEventListener('click', () => renderPlan(button.dataset.plan)));
 
   const showToast = (message) => {
     if (!toast) return;

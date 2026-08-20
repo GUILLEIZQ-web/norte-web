@@ -214,7 +214,7 @@ h1 em, h2 em { color: var(--lime); font-style: italic; font-weight: inherit; }
 .centered > p { max-width: 510px; }
 .plans-wrap { display: grid; grid-template-columns: 1.17fr .83fr; align-items: stretch; gap: 19px; margin-top: 56px; }
 .plans-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
-.plan-card { display: flex; min-height: 412px; flex-direction: column; align-items: flex-start; padding: 23px; border: 1px solid var(--line); border-radius: 17px; background: var(--surface); color: var(--ink); cursor: pointer; text-align: left; transition: transform .25s ease, border-color .25s ease, background .25s ease, box-shadow .25s ease; }
+.plan-card { display: flex; min-height: 412px; flex-direction: column; align-items: flex-start; padding: 23px; border: 1px solid var(--line); border-radius: 17px; background: var(--surface); color: var(--ink); text-align: left; transition: transform .25s ease, border-color .25s ease, background .25s ease, box-shadow .25s ease; }
 .plan-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
 .plan-card.is-active { border-color: var(--ink); background: var(--deep); color: #fff; box-shadow: var(--shadow); }
 .plan-index { display: grid; width: 29px; height: 29px; place-items: center; border-radius: 8px; background: var(--lime-soft); color: var(--deep); font-family: "DM Mono", monospace; font-size: .56rem; font-weight: 700; }
@@ -228,7 +228,7 @@ h1 em, h2 em { color: var(--lime); font-style: italic; font-weight: inherit; }
 .is-active .plan-title p { color: #c4d0d5; }
 .plan-card ul { display: grid; gap: 10px; margin: auto 0 0; padding: 25px 0 0; border-top: 1px solid var(--line); list-style: none; width: 100%; font-size: .67rem; font-weight: 700; }
 .plan-card li::before { margin-right: 7px; color: var(--lime); content: "✓"; }
-.plan-select { display: flex; align-items: center; justify-content: space-between; width: 100%; margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--line); font-size: .67rem; font-weight: 800; }
+.plan-select { display: flex; align-items: center; justify-content: space-between; width: 100%; margin-top: 22px; padding: 14px 0 0; border: 0; border-top: 1px solid var(--line); background: transparent; color: inherit; cursor: pointer; font: inherit; font-size: .67rem; font-weight: 800; text-align: left; }
 .plan-select i { font-size: 1rem; font-style: normal; }
 .plan-preview { position: relative; overflow: hidden; padding: 29px; border-radius: 18px; background: var(--deep); color: #fff; box-shadow: var(--shadow); }
 .plan-preview::before { position: absolute; right: -100px; bottom: -90px; width: 310px; height: 310px; border-radius: 50%; background: var(--lime); content: ""; opacity: .94; }

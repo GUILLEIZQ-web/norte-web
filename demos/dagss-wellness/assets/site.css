@@ -7,7 +7,7 @@
   --cream-deep: #eee4d9;
   --paper: #fffdfa;
   --ink: #1e2a31;
-  --muted: #63717a;
+  --muted: #586770;
   --line: rgba(21, 59, 87, 0.15);
   --green: #2e7d5b;
   --shadow: 0 26px 70px rgba(25, 44, 55, 0.13);
@@ -19,6 +19,10 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 96px;
 }
 
 body {
@@ -39,6 +43,59 @@ a {
   text-decoration: none;
 }
 
+a:focus-visible,
+button:focus-visible,
+[tabindex="-1"]:focus-visible {
+  outline: 3px solid #f0a43a;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: -80px;
+  left: 16px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: var(--navy-deep);
+  color: white;
+  font-weight: 800;
+  transition: top 160ms ease;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+.demo-bar {
+  display: flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 8px 20px;
+  background: #0a202f;
+  color: #eef5f8;
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.demo-bar p {
+  margin: 0;
+}
+
+.demo-bar a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 6px;
+  color: #dcebf2;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .site-header {
   position: sticky;
   z-index: 20;
@@ -56,6 +113,7 @@ a {
 
 .brand {
   display: inline-flex;
+  min-height: 44px;
   align-items: center;
   gap: 11px;
   color: var(--navy);
@@ -89,7 +147,7 @@ a {
 
 .brand small {
   margin-top: 6px;
-  color: #8d8176;
+  color: #665d56;
   font-size: 8px;
   font-weight: 700;
   letter-spacing: 0.42em;
@@ -109,6 +167,15 @@ nav a,
 .service-card a,
 .contact-card a {
   transition: color 160ms ease;
+}
+
+nav a,
+.text-link,
+.service-card a,
+.contact-card a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
 }
 
 nav a:hover,
@@ -164,7 +231,7 @@ nav a:hover,
 
 .eyebrow {
   margin: 0 0 20px;
-  color: #507894;
+  color: #376985;
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.22em;
@@ -377,7 +444,7 @@ h2 {
 }
 
 .service-number {
-  color: #7894a6;
+  color: #5c7483;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 13px;
 }
@@ -454,6 +521,15 @@ h2 {
 
 .large-copy strong {
   color: var(--navy);
+}
+
+.confirmation-note {
+  margin: -18px 0 32px;
+  padding: 14px 16px;
+  border-left: 4px solid #66889e;
+  background: rgba(255, 253, 250, 0.72);
+  color: #4b5b64;
+  font-size: 13px;
 }
 
 .steps {
@@ -569,6 +645,14 @@ h2 {
   font-size: 21px;
 }
 
+.contact-card .health-notice p {
+  margin: 0;
+  color: #e3edf2;
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
 .contact-card strong {
   font-size: 13px;
   font-weight: 600;
@@ -668,6 +752,17 @@ footer p {
 }
 
 @media (max-width: 760px) {
+  .demo-bar {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 2px;
+    padding: 9px 16px;
+  }
+
+  .demo-bar a {
+    justify-content: center;
+  }
+
   .site-header {
     min-height: 68px;
     padding: 10px 18px;
@@ -694,16 +789,16 @@ footer p {
   }
 
   .section {
-    padding: 72px 20px;
+    padding: 58px 20px;
   }
 
   .hero {
-    padding-top: 64px;
-    gap: 48px;
+    padding-top: 48px;
+    gap: 40px;
   }
 
   h1 {
-    font-size: clamp(48px, 15vw, 66px);
+    font-size: clamp(44px, 14vw, 62px);
   }
 
   .hero-actions {
@@ -738,7 +833,7 @@ footer p {
     align-items: stretch;
     flex-direction: column;
     gap: 8px;
-    padding: 34px 20px;
+    padding: 26px 20px;
   }
 
   .intro-strip span {
@@ -765,7 +860,8 @@ footer p {
   }
 
   .service-card {
-    min-height: 220px;
+    min-height: 200px;
+    padding: 25px;
   }
 
   .professional {
@@ -805,6 +901,10 @@ footer p {
 
   .whatsapp-float strong {
     display: none;
+  }
+
+  .confirmation-note {
+    margin-top: -12px;
   }
 }
 
