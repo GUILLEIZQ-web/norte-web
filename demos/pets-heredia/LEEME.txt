@@ -1,0 +1,13 @@
+Pets Heredia
+
+Esta carpeta es independiente y está lista para GitHub Pages.
+Copia la carpeta completa dentro de tu portafolio; no muevas solamente index.html.
+Ruta sugerida: demos/pets-heredia/
+El enlace quedará: https://guilleizq-web.github.io/norte-web/demos/pets-heredia/
+
+Datos públicos usados en la demo (por confirmar con el negocio):
+- WhatsApp: +506 8465 7070
+- Ubicación: Heredia centro, frente a la Estación del Tren
+- Horario: 8:00 a. m. a 7:00 p. m., todos los días
+
+La demo no publica precios, marcas ni disponibilidad; los botones invitan a consultar directamente por WhatsApp.
