@@ -1,0 +1,12 @@
+Fisioterapia Dra. Kim
+
+Esta carpeta es independiente y está lista para GitHub Pages.
+Copia la carpeta completa dentro de tu portafolio; no muevas solamente index.html.
+Ruta sugerida: demos/fisioterapia-dra-kim/
+El enlace quedará: https://guilleizq-web.github.io/norte-web/demos/fisioterapia-dra-kim/
+
+Datos públicos usados en la demo (por confirmar con el negocio):
+- WhatsApp: +506 7103 1779
+- Zona: Heredia, Costa Rica
+
+No se publican precios, tratamientos específicos, horarios ni ubicación exacta porque no fueron confirmados por la profesional.
