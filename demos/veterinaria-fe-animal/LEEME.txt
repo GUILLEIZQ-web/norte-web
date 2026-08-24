@@ -1,0 +1,13 @@
+Veterinaria Fé Animal
+
+Esta carpeta es independiente y está lista para GitHub Pages.
+Ruta sugerida: demos/veterinaria-fe-animal/
+El enlace quedará: https://guilleizq-web.github.io/norte-web/demos/veterinaria-fe-animal/
+
+Datos públicos usados en la demo (por confirmar con el negocio):
+- WhatsApp: +506 6165 6388
+- Ubicación: Diagonal a la urbanización La Cooperativa, sector San Martín, San Isidro de Heredia
+- Clasificación pública: atención / servicio de urgencias veterinarias
+- Horario exacto y servicios específicos: por confirmar
+
+No se publican precios, diagnósticos, tratamientos, disponibilidad ni promesas médicas.
