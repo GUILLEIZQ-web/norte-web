@@ -37,8 +37,10 @@ La clienta indicó que su WhatsApp Business es diferente del número personal an
 
 ## Qué incluye esta entrega
 
-- Portada enfocada únicamente en páginas web.
-- Oferta Página Express de ₡39.900 con alcance, pagos, propiedad y soporte explicados.
+- Portada comercial completa para Norte Web, con planes, precios, demos, preguntas frecuentes y llamadas a WhatsApp.
+- Cinco opciones claras: Página Inicial (₡39.900), Página Profesional (₡99.900), Catálogo WhatsApp (₡169.900), Sitio Administrable en WordPress (desde ₡249.900) y Tienda Online (desde USD $650).
+- Selector de moneda: muestra la oferta completa en colones o en dólares para proyectos remotos.
+- Alcance, pagos, propiedad, edición posterior y costos externos explicados sin promesas engañosas.
 - Cuatro propuestas destacadas y etiquetadas honestamente.
 - Veinte demos operativas.
 - Metadatos sociales con direcciones absolutas de GitHub Pages.

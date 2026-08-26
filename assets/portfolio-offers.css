@@ -1,0 +1,244 @@
+/* Oferta administrable: se mantiene separado para que actualizar precios o alcance sea sencillo. */
+.admin-banner {
+  position: relative;
+  display: grid;
+  grid-template-columns: .12fr 1fr .52fr;
+  grid-template-areas:
+    "number copy price"
+    "number fineprint fineprint";
+  gap: 20px 30px;
+  align-items: center;
+  margin-top: 28px;
+  padding: 37px 42px 29px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 13px 32px rgba(10, 24, 35, .06);
+}
+
+.admin-banner::before {
+  position: absolute;
+  top: -145px;
+  right: -105px;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--lime) 48%, transparent), transparent 68%);
+  content: "";
+  pointer-events: none;
+}
+
+.admin-number {
+  grid-area: number;
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  align-self: start;
+  border-radius: 17px;
+  background: var(--navy);
+  color: var(--lime);
+  font-family: "DM Mono", monospace;
+  font-size: .72rem;
+  letter-spacing: .08em;
+}
+
+.admin-copy { grid-area: copy; }
+
+.admin-copy .kicker { margin-bottom: 13px; }
+
+.admin-copy h3 {
+  max-width: 650px;
+  margin: 0 0 13px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2rem, 3.35vw, 3.15rem);
+  font-weight: 600;
+  letter-spacing: -.07em;
+  line-height: .92;
+}
+
+.admin-copy h3 em {
+  color: var(--lime-deep);
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.admin-copy > p:not(.kicker) {
+  max-width: 620px;
+  margin: 0 0 17px;
+  color: var(--muted);
+  font-size: .84rem;
+  line-height: 1.65;
+}
+
+.admin-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.admin-points span {
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--bg);
+  color: var(--muted);
+  font-size: .64rem;
+  font-weight: 700;
+}
+
+.admin-price {
+  position: relative;
+  z-index: 1;
+  grid-area: price;
+  padding: 25px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+}
+
+.admin-price small,
+.admin-price strong { display: block; }
+
+.admin-price small {
+  color: var(--muted);
+  font-size: .64rem;
+  font-weight: 700;
+}
+
+.admin-price strong {
+  margin: 5px 0 8px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2.25rem;
+  letter-spacing: -.075em;
+  line-height: 1;
+}
+
+.admin-price p {
+  margin: 0 0 17px;
+  color: var(--muted);
+  font-size: .69rem;
+  line-height: 1.45;
+}
+
+.admin-price .button {
+  width: 100%;
+  min-height: 44px;
+  font-size: .72rem;
+}
+
+.admin-fineprint {
+  grid-area: fineprint;
+  max-width: 840px;
+  margin: 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .62rem;
+  line-height: 1.5;
+}
+
+/* El selector permite mostrar la misma oferta en moneda local o en dólares. */
+.plans-heading-side {
+  display: grid;
+  gap: 14px;
+  align-items: start;
+  max-width: 425px;
+}
+
+.plans-heading-side > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.65;
+}
+
+.currency-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+}
+
+.currency-switcher > span {
+  width: 100%;
+  margin-bottom: 1px;
+  color: var(--muted);
+  font-family: "DM Mono", monospace;
+  font-size: .58rem;
+  font-weight: 500;
+  letter-spacing: .075em;
+  text-transform: uppercase;
+}
+
+.currency-button {
+  min-height: 35px;
+  padding: 8px 11px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+  font-size: .7rem;
+  font-weight: 800;
+  transition: background .2s, border-color .2s, color .2s, transform .2s;
+}
+
+.currency-button:hover { transform: translateY(-1px); }
+
+.currency-button.is-active {
+  border-color: var(--navy);
+  background: var(--navy);
+  color: var(--lime);
+}
+
+:root[data-theme="dark"] .currency-button.is-active {
+  border-color: var(--lime);
+  background: var(--lime);
+  color: #132017;
+}
+
+.currency-note {
+  color: var(--muted);
+  font-size: .63rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 980px) {
+  .admin-banner {
+    grid-template-columns: .12fr 1fr;
+    grid-template-areas:
+      "number copy"
+      "number price"
+      "fineprint fineprint";
+  }
+
+  .plans-heading-side { max-width: 390px; }
+}
+
+@media (max-width: 780px) {
+  .admin-banner {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "number"
+      "copy"
+      "price"
+      "fineprint";
+    gap: 22px;
+    padding: 29px;
+  }
+
+  .admin-number {
+    width: 51px;
+    height: 51px;
+    border-radius: 13px;
+  }
+
+  .plans-heading-side { max-width: none; }
+}
+
+@media (max-width: 460px) {
+  .admin-price strong { font-size: 2rem; }
+}
