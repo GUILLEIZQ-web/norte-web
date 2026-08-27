@@ -1,0 +1,10 @@
+DEMO: Repostería Fina El Buen Gusto
+
+Esta es una propuesta visual. Antes de publicarla para el negocio, sustituir:
+- El botón de consulta por el WhatsApp real del negocio.
+- Imágenes generadas por fotos autorizadas de sus productos.
+- Datos de contacto, dirección, horarios, sabores, precios y redes.
+- La etiqueta noindex,nofollow por index,follow solo después de tener la aprobación del negocio.
+
+Vista local: abrir index.html.
+Publicación en GitHub Pages: subir la carpeta completa como demos/el-buen-gusto/.
