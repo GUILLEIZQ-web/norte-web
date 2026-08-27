@@ -3,14 +3,15 @@
 
   const config = window.SITE_CONFIG || {};
   const root = document.documentElement;
-  root.classList.replace('no-js', 'js');
   const themeButton = document.querySelector('.theme-toggle');
   const themeColorMeta = document.querySelector('meta[name="theme-color"]');
   const menuButton = document.querySelector('.menu-button');
   const menu = document.querySelector('.nav-links');
   const hasWhatsApp = /^\d{8,15}$/.test(config.whatsapp || '');
   const hasEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(config.email || '');
-  const defaultMessage = 'Hola, vi Norte Web y me interesa una página para mi negocio.';
+  const defaultMessage = 'Hola, vi Norte Web y me interesa una solución digital para mi negocio.';
+
+  root.classList.replace('no-js', 'js');
 
   function readTheme() {
     try { return localStorage.getItem('norte-theme'); } catch (error) { return null; }
@@ -73,56 +74,6 @@
       element.rel = 'noopener noreferrer';
     });
   });
-
-  const currencyButtons = Array.from(document.querySelectorAll('[data-currency]'));
-  const currencyPrices = Array.from(document.querySelectorAll('[data-price-currency]'));
-  const currencyNote = document.querySelector('[data-currency-note]');
-
-  function readCurrency() {
-    try {
-      return localStorage.getItem('norte-currency') === 'USD' ? 'USD' : 'CRC';
-    } catch (error) {
-      return 'CRC';
-    }
-  }
-
-  function saveCurrency(currency) {
-    try { localStorage.setItem('norte-currency', currency); } catch (error) { /* La selección se mantiene durante esta visita. */ }
-  }
-
-  function applyCurrency(currency) {
-    const nextCurrency = currency === 'USD' ? 'USD' : 'CRC';
-
-    currencyPrices.forEach(function (element) {
-      const value = nextCurrency === 'USD' ? element.dataset.priceUsd : element.dataset.priceCrc;
-      if (value) element.textContent = value;
-    });
-
-    currencyButtons.forEach(function (button) {
-      const isActive = button.dataset.currency === nextCurrency;
-      button.classList.toggle('is-active', isActive);
-      button.setAttribute('aria-pressed', String(isActive));
-    });
-
-    if (currencyNote) {
-      currencyNote.textContent = nextCurrency === 'USD'
-        ? 'Precios referenciales para proyectos remotos. La moneda se confirma antes de iniciar.'
-        : 'Precios para proyectos en Costa Rica.';
-    }
-
-    root.dataset.currency = nextCurrency;
-  }
-
-  if (currencyButtons.length && currencyPrices.length) {
-    applyCurrency(readCurrency());
-    currencyButtons.forEach(function (button) {
-      button.addEventListener('click', function () {
-        const nextCurrency = button.dataset.currency === 'USD' ? 'USD' : 'CRC';
-        saveCurrency(nextCurrency);
-        applyCurrency(nextCurrency);
-      });
-    });
-  }
 
   function closeMenu() {
     menu?.classList.remove('open');
