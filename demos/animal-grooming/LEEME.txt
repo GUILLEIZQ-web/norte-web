@@ -1,0 +1,14 @@
+DEMO PARA ANIMAL GROOMING
+
+Ruta para GitHub Pages:
+/demos/animal-grooming/
+
+Información usada en esta propuesta:
+- Negocio: Animal Grooming
+- Actividad: Estética canina
+- Ubicación: Tibás, San José
+- WhatsApp público: +506 8510 4365
+
+El sitio enlaza el botón de reservas al WhatsApp con un mensaje preparado. Los nombres de los servicios son una propuesta inicial y se pueden adaptar a los servicios exactos del negocio.
+
+La imagen principal fue creada para esta demo como una imagen de grooming canino sin logos ni texto.
