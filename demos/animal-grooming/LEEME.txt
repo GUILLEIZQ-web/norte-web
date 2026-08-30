@@ -3,6 +3,9 @@ DEMO PARA ANIMAL GROOMING
 Ruta para GitHub Pages:
 /demos/animal-grooming/
 
+Enlace al publicarlo:
+https://guilleizq-web.github.io/norte-web/demos/animal-grooming/
+
 Información usada en esta propuesta:
 - Negocio: Animal Grooming
 - Actividad: Estética canina
